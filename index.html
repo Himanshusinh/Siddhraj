@@ -1,50 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Animated Hamburger Menu</title>
-  <link rel="stylesheet" href="style.css">
-  <!-- GSAP and ScrollTrigger -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
-</head>
-<body>
-  <header>
-    <img src="scroll/ssss.png" alt="Siddhraj Logo">
-    
-    <!-- Menu Wrapper to wrap both the hamburger and nav links -->
-    <div class="menu-wrapper">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animated Hamburger Menu</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- GSAP and ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <img src="scroll/ssss.png" alt="Siddhraj Logo" />
+
+      <!-- Menu Wrapper to wrap both the hamburger and nav links -->
+      <div class="menu-wrapper">
         <div id="hamburger" class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
+          <span></span>
+          <span></span> 
+          <span></span>
         </div>
 
         <!-- Background that slides in -->
         <div class="nav-background"></div>
 
         <ul id="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
+      </div>
+    </header>
+
+    <div id="home">
+      <canvas></canvas>
     </div>
-  </header>
 
-  <div id="home">
-    <canvas></canvas>
+<!-- second page  -->
+    <div class="Background">
 
+        <img src="graphics/bg1.svg" alt="Background" class="bg1" />
+ 
+      
+      <h3 class="sid">Siddhraj Z²</h3>
+      <h1 class="">For customers,<br> with customers.</h1>
+      <div class="collab">
+        <span>Creating spaces that define luxury and comfort <br>
+          for both corporate and residential</span>
+        <img src="graphics/crane-image.jpg" alt="">
+      </div>
+    </div>
+
+<!-- Third page  -->
+    <div class="homepage-sec3">
+      <h1>z+</h1>
+      <img src="graphics/Z+103 12.png">
+    </div>
+
+<!-- fourth page -->
+ <div class="homepage-sec4">
+    <section class="first">
+      <div>
+        <h1>Z+</h1>
+        <img src="graphics/gallay1.jpg" alt="">
+      </div>
+     <div>
+      <h1>ZOLD</h1>
+      <img src="graphics/gallary2.png" alt="">
+     </div>
+      
+    </section>
+    <section class="second">
+      <div>
+        <h1>ZORI</h1>
+        <img src="graphics/gallary3.png" alt="">
+      </div>
+     <div>
+      <h1>SIDDHRAJ GREEN</h1>
+      <img src="graphics/gallary4.jpg" alt="">
+     </div>
+    </section>
+    <section class="third">
+      <div>
+        <h1>ZOEY</h1>
+        <img src="graphics/gallary5.jpg" alt="">
+      </div>
+     <div>
+      <h1>Z 2</h1>
+      <img src="graphics/gallary6.jpg" alt="">
+     </div>
+    </section>
+
+ </div>
     
-  </div>
-  <div class="Background">
-    <img src="graphics/bg1.svg" alt="Background" class="bg1">
-    <!-- <img src="graphics/sid font.svg" alt="Sid" class="sid"> -->
-    <h3 class="sid">Siddhraj Z²</h3>
-  </div>
+    
 
-  <!-- Link to external JavaScript file -->
-  <script src="script.js"></script>
-</body>
+   
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+  </body>
 </html>

@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ 
+}
+
+
+.first-section{
+    background-image: url('../graphics/bg1.svg') ;
+
+    .logo{
+        img{
+            width: auto;
+            height: auto;
+            position: absolute;
+            z-index: 1;
+            margin: 3% 0 0 3%;
+        }
+        h1{
+            color: #fff;
+            position: absolute;
+            z-index: 1;
+            top: 40%;
+            left: 25%;
+            font-size: 120px;
+            font-weight: 600;
+            font-family: "Baloo Bhaijaan 2", system-ui;
+        }
+    }
+
+    img{
+        position: relative;
+        width: 100vw;
+        height: 100%;
+    }
+
+    .text{
+        h1{
+            font-size: 50px;
+            font-weight: 400;
+            color: #fff;
+            word-spacing: 3px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5% 5% 5% 5%;
+            font-family: "Archivo Black", sans-serif;
+            letter-spacing: 3px;
+        }
+    }
+
+    .content{
+        display: flex;
+        background-color: #fff;
+
+        .tilted-text{
+            h1{
+                color: #dedede;
+                font-weight: 400;
+                font-family: "Archivo Black", sans-serif;
+                font-size: 70px;
+                rotate: calc(270deg);
+                padding: 60% 5% 30% 0;
+                letter-spacing: 5px;
+            }
+        }
+        .flex-col{
+            display: flex;
+            flex-direction: column;
+            font-family: "Baloo Bhaijaan 2", system-ui;
+            word-spacing: 2px;
+            font-weight: 400;
+            font-size: 20px;
+
+            .content-text{
+                padding: 10% 0 0 0 ;
+
+                p{
+                    padding: 0 5% 3% 0;
+                }
+                
+            }
+
+        }
+    }
+
+    .image-adjust{
+        margin-top: 5%;
+        img{
+            width: 100vw;
+            height: auto;
+        }
+    }
+    
+    
+}
+
+/* second-section */
+.second-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .carousel {
+    position: relative;
+    width: 100vw;
+    height: 100%; /* Carousel height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .carousel-track {
+    display: flex;
+    transition: transform 0.8s ease-in-out; /* Smooth sliding animation */
+  }
+  
+  .carousel-image {
+    width: 15vw; /* Side images initially 15% */
+    height: auto;
+    opacity: 0.5;
+    transition: transform 0.8s ease, opacity 0.8s ease; /* Smooth transition for image size */
+  }
+  
+  .carousel-image.active {
+    width: 75vw; /* Central image will be 75% of the screen */
+    opacity: 1;
+  }
+  
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    color: #333;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .left-arrow {
+    left: 2%;
+  }
+  
+  .right-arrow {
+    right: 2%;
+  }

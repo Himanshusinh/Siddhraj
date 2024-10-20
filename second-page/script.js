@@ -1,82 +1,68 @@
-// Access the Images
 let slideImages = document.querySelectorAll('.car');
-// Access the next and prev buttons
 let next = document.querySelector('.next');
 let prev = document.querySelector('.prev');
-// Access the indicators
 let dots = document.querySelectorAll('.dot');
+let counter = 0;
+let slideInterval;
 
-var counter = 0;
-var slideInterval;
+// Function to update the slide
+function updateSlide(position) {
+    const slides = document.querySelector('.slides');
+    slides.style.transform = `translateX(${-position * 100}%)`;
+    updateIndicators();
+}
 
-// Code for next button
+// Next button click handler
 next.addEventListener('click', slideNext);
-function slideNext(){
-  slideImages[counter].style.animation = 'next1 0.5s ease-in forwards';
-  if(counter >= slideImages.length - 1){
-    counter = 0;
-  } else {
+
+function slideNext() {
     counter++;
-  }
-  slideImages[counter].style.animation = 'next2 0.5s ease-in forwards';
-  indicators();
+    if (counter >= slideImages.length) {
+        counter = 0; // Reset to first image
+    }
+    updateSlide(counter);
 }
 
-// Code for prev button
+// Previous button click handler
 prev.addEventListener('click', slidePrev);
-function slidePrev(){
-  slideImages[counter].style.animation = 'prev1 0.5s ease-in forwards';
-  if(counter == 0){
-    counter = slideImages.length - 1;
-  } else {
+
+function slidePrev() {
     counter--;
-  }
-  slideImages[counter].style.animation = 'prev2 0.5s ease-in forwards';
-  indicators();
+    if (counter < 0) {
+        counter = slideImages.length - 1; // Go to last image
+    }
+    updateSlide(counter);
 }
 
-// Auto sliding every 3 seconds, starting when the page loads
-function autoSliding(){
-  slideInterval = setInterval(function() {
-    slideNext();
-  }, 3000);
+// Auto sliding every 3 seconds
+function autoSliding() {
+    slideInterval = setInterval(slideNext, 3000);
 }
 
-// Start auto sliding immediately when the page loads
-window.onload = function() {
-  autoSliding();
+// Start auto sliding when page loads
+window.onload = function () {
+    autoSliding();
 };
 
 // Stop auto sliding when mouse is over the container
 const container = document.querySelector('.slide-container');
-container.addEventListener('mouseover', function(){
-  clearInterval(slideInterval);
+container.addEventListener('mouseover', function () {
+    clearInterval(slideInterval);
 });
 
 // Resume auto sliding when mouse leaves the container
 container.addEventListener('mouseout', autoSliding);
 
-// Add and remove active class from the indicators
-function indicators(){
-  for(let i = 0; i < dots.length; i++){
-    dots[i].className = dots[i].className.replace(' active', '');
-  }
-  dots[counter].className += ' active';
+// Add and remove active class from indicators
+function updateIndicators() {
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[counter].classList.add('active');
 }
 
-// Add click event to the indicator
-function switchImage(currentImage){
-  let imageId = currentImage.getAttribute('attr');
-  if(imageId > counter){
-    slideImages[counter].style.animation = 'next1 0.5s ease-in forwards';
-    counter = imageId;
-    slideImages[counter].style.animation = 'next2 0.5s ease-in forwards';
-  } else if(imageId == counter){
-    return;
-  } else {
-    slideImages[counter].style.animation = 'prev1 0.5s ease-in forwards';
-    counter = imageId;
-    slideImages[counter].style.animation = 'prev2 0.5s ease-in forwards';	
-  }
-  indicators();
-}
+// Switch image based on clicked dot
+dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+        counter = index;
+        updateSlide(counter);
+    });
+});

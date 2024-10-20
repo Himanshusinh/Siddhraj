@@ -1,82 +1,82 @@
+// Access the Images
+let slideImages = document.querySelectorAll('.car');
+// Access the next and prev buttons
+let next = document.querySelector('.next');
+let prev = document.querySelector('.prev');
+// Access the indicators
+let dots = document.querySelectorAll('.dot');
 
-  document.addEventListener('DOMContentLoaded', function () {
-    const carouselTrack = document.querySelector('.carousel-track');
-    let images = Array.from(document.querySelectorAll('.carousel-image'));
-    let currentIndex = 1; // Start with the second image in the middle
+var counter = 0;
+var slideInterval;
 
-    // Clone the first and last images to create seamless loop
-    const firstClone = images[0].cloneNode(true);
-    const lastClone = images[images.length - 1].cloneNode(true);
+// Code for next button
+next.addEventListener('click', slideNext);
+function slideNext(){
+  slideImages[counter].style.animation = 'next1 0.5s ease-in forwards';
+  if(counter >= slideImages.length - 1){
+    counter = 0;
+  } else {
+    counter++;
+  }
+  slideImages[counter].style.animation = 'next2 0.5s ease-in forwards';
+  indicators();
+}
 
-    // Append and prepend the clones to the track
-    carouselTrack.appendChild(firstClone);
-    carouselTrack.insertBefore(lastClone, images[0]);
+// Code for prev button
+prev.addEventListener('click', slidePrev);
+function slidePrev(){
+  slideImages[counter].style.animation = 'prev1 0.5s ease-in forwards';
+  if(counter == 0){
+    counter = slideImages.length - 1;
+  } else {
+    counter--;
+  }
+  slideImages[counter].style.animation = 'prev2 0.5s ease-in forwards';
+  indicators();
+}
 
-    // Recalculate the images array to include the clones
-    images = Array.from(document.querySelectorAll('.carousel-image'));
+// Auto sliding every 3 seconds, starting when the page loads
+function autoSliding(){
+  slideInterval = setInterval(function() {
+    slideNext();
+  }, 3000);
+}
 
-    // Update carousel immediately to account for clones
-    updateCarousel();
+// Start auto sliding immediately when the page loads
+window.onload = function() {
+  autoSliding();
+};
 
-    // Event listeners for the arrows
-    document.getElementById('rightArrow').addEventListener('click', function () {
-      slideNext();
-    });
+// Stop auto sliding when mouse is over the container
+const container = document.querySelector('.slide-container');
+container.addEventListener('mouseover', function(){
+  clearInterval(slideInterval);
+});
 
-    document.getElementById('leftArrow').addEventListener('click', function () {
-      slidePrev();
-    });
+// Resume auto sliding when mouse leaves the container
+container.addEventListener('mouseout', autoSliding);
 
-    // Function to update the carousel when changing images
-    function updateCarousel() {
-      images.forEach((img, index) => {
-        img.classList.remove('active');
-        if (index === currentIndex) {
-          img.classList.add('active');
-        }
-      });
+// Add and remove active class from the indicators
+function indicators(){
+  for(let i = 0; i < dots.length; i++){
+    dots[i].className = dots[i].className.replace(' active', '');
+  }
+  dots[counter].className += ' active';
+}
 
-      // Calculate the translation to center the active image
-      const translateValue = -(currentIndex * 15) + 15; // Adjust to center the active image
-      carouselTrack.style.transform = `translateX(${translateValue}vw)`;
-    }
-
-    // Function to move to the next image
-    function slideNext() {
-      currentIndex++;
-      updateCarousel();
-
-      // When reaching the end, jump back to the first (real) image
-      if (currentIndex === images.length - 1) {
-        setTimeout(() => {
-          carouselTrack.style.transition = "none"; // Disable smooth animation to "jump"
-          currentIndex = 1; // Reset index to the first real image
-          updateCarousel();
-          setTimeout(() => {
-            carouselTrack.style.transition = "transform 0.8s ease-in-out"; // Re-enable smooth animation
-          }, 50); // Add a tiny delay to reset the transition
-        }, 800); // Wait for the normal animation to finish before "jumping"
-      }
-    }
-
-    // Function to move to the previous image
-    function slidePrev() {
-      currentIndex--;
-      updateCarousel();
-
-      // When reaching the start, jump back to the last (real) image
-      if (currentIndex === 0) {
-        setTimeout(() => {
-          carouselTrack.style.transition = "none"; // Disable smooth animation to "jump"
-          currentIndex = images.length - 2; // Reset index to the last real image
-          updateCarousel();
-          setTimeout(() => {
-            carouselTrack.style.transition = "transform 0.8s ease-in-out"; // Re-enable smooth animation
-          }, 50); // Add a tiny delay to reset the transition
-        }, 800); // Wait for the normal animation to finish before "jumping"
-      }
-    }
-
-    // Initialize the carousel to start with the first real image
-    updateCarousel();
-  });
+// Add click event to the indicator
+function switchImage(currentImage){
+  let imageId = currentImage.getAttribute('attr');
+  if(imageId > counter){
+    slideImages[counter].style.animation = 'next1 0.5s ease-in forwards';
+    counter = imageId;
+    slideImages[counter].style.animation = 'next2 0.5s ease-in forwards';
+  } else if(imageId == counter){
+    return;
+  } else {
+    slideImages[counter].style.animation = 'prev1 0.5s ease-in forwards';
+    counter = imageId;
+    slideImages[counter].style.animation = 'prev2 0.5s ease-in forwards';	
+  }
+  indicators();
+}

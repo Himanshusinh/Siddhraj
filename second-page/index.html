@@ -46,17 +46,29 @@
 
 
     <!-- second-section -->
-    <div class="second-section">
-        <div class="carousel">
-          <span class="arrow left-arrow" id="leftArrow">&#10094;</span> <!-- Left arrow -->
-          <div class="carousel-track">
-            <img class="carousel-image" src="./images/swipe-1.png" alt="Swipe 1">
-            <img class="carousel-image" src="./images/3rdimage.png" alt="Swipe 2">
-            <img class="carousel-image" src="./images/mainimage.jpg" alt="Swipe 3">
-          </div>
-          <span class="arrow right-arrow" id="rightArrow">&#10095;</span> <!-- Right arrow -->
+    <div class="slide-container">
+        <div class="slides">
+            <img src="./images/3rdimage.png" class="active car">
+            <img src="./images/mainimage.jpg" class="car">
+            <img src="./images/swipe-1.png" class="car" >
+            <!-- <img src="./graphics/bg1.svg">
+            <img src="./graphics/bg1.svg"> -->
         </div>
-      </div>
+    
+        <div class="buttons">
+            <span class="next">&#10095;</span>
+            <span class="prev">&#10094;</span>
+        </div>
+    
+        <div class="dotsContainer">
+            <div class="dot active" attr='0' onclick="switchImage(this)"></div>
+            <div class="dot" attr='1' onclick="switchImage(this)"></div>
+            <div class="dot" attr='2' onclick="switchImage(this)"></div>
+            <!-- <div class="dot" attr='3' onclick="switchImage(this)"></div>
+            <div class="dot" attr='4' onclick="switchImage(this)"></div> -->
+        </div>
+    
+    </div>
 
 
 

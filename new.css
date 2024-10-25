@@ -1,0 +1,118 @@
+/* Reset and Global Styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+blockquote {
+  position: relative;
+  padding-left: 1.5rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+  line-height: 1.25;
+  letter-spacing: -0.05rem;
+}
+
+blockquote:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  background-color: #A9DFBF;
+  border-radius: 60px;
+}
+
+figure {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+.hero {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.hero:nth-child(1) figure { background-image: url('slider images/out-s001.jpg'); }
+.hero:nth-child(2) figure { background-image: url('slider images/out-s002.jpg'); }
+.hero:nth-child(3) figure { background-image: url('slider images/out-s003.jpg'); }
+.hero:nth-child(4) figure { background-image: url('slider images/out-s004.jpg'); }
+.hero:nth-child(5) figure { background-image: url('slider images/out-s005.jpg'); }
+.hero:nth-child(6) figure { background-image: url('slider images/out-s006.jpg'); }
+.hero:nth-child(7) figure { background-image: url('slider images/out-s007.jpg'); }
+
+.hero-inner {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  clip: rect(0, auto, auto, 0);
+}
+
+@supports (-webkit-overflow-scrolling: touch) {
+  .hero-inner {
+    clip: unset;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}
+
+.hero__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 8vw;
+  letter-spacing: -0.125rem;
+  text-align: center;
+}
+
+@media (min-width: 1200px) {
+  .hero__title {
+    font-size: 6rem;
+  }
+}
+
+/* More Info Button Style */
+.more-info-btn1{
+  display: block;
+  position: fixed;
+  top: 54%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 25px;
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  cursor: pointer;
+  border-radius: 40px;
+  font-size: 1.5rem;
+  z-index: 1;
+}
+
+.more-info-btn1:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.head{
+    position: fixed;
+    top: 45%;
+}

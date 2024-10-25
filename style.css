@@ -181,17 +181,23 @@ canvas {
   }
 
   h1{
-    position: absolute;
-    top: -1px;
-    font-size: 100px;
-    color: #fff;
-    margin: 200px 0px 0px 100px;
-    z-index: 2;
-    font-family: "Archivo Black", sans-serif;
-    letter-spacing: 10px;
+        position: absolute;
+        top: -98px;
+        font-size: 51px;
+        color: #5c5c5c;
+        margin: 200px 0px 0px 100px;
+        z-index: 2;
+        font-family: "Archivo Black", sans-serif;
+        letter-spacing: 10px;
     
 
     
+  }
+
+  #kl{
+    object-fit: cover;
+    width: 100vw;
+    height: 238px;
   }
 
   .collab{
@@ -219,66 +225,129 @@ canvas {
 
 /* homepage-sec3 */
 
-
 .homepage-sec3 {
   display: flex;
   flex-direction: column;
-  position: relative;
   background-image: url('graphics/bg1.svg');
-  margin-top: -1%;
+
+  .first-section{
+    width: 80vw;
+   
+  }
+  .sectionfirstimage{
+      width: 80vw;
+      animation: disappearfirstimage linear;
+      animation-timeline: view();
+      animation-range: entry 100% cover 200%;
+  }
+  
+  .middle-section {
+    margin-top: 2%;
+    position: relative; 
+    display: flex;
+    justify-content: center; 
+    width: 100%;
+  }
+  
+  .second-image {
+    width: 60vw;
+    height: auto;
+    animation: appear linear forwards;
+    animation-timeline: view();
+    animation-range: entry 70% cover 50%;
+  }
+
+  .extraimage{
+      width: 100vw;
+      height: 100vh;
+      display: none;
+      animation: extraimages linear forwards;
+      animation-timeline: view();
+      animation-range: enter 0% cover 40%;
+      z-index: 6;
+  }
+  
+  .first-image, .third-image {
+    position: absolute;
+    bottom: 0; 
+    width: 15vw;
+    height: auto; 
+    animation: secondsection linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
+  }
+
+  .first-image {
+    left: 0;
+    margin-left: 1%;
+  }
+  
+  .third-image {
+    right: 0;
+    margin-right: 1%; 
+  }
+
+  .end-section img{
+    margin: 2%  0 0 23%;
+  }
 }
 
-/* First section (top image) */
-.first-section img {
-  width: 100%; /* Make it full width on small devices */
-  max-width: 80vw; /* Restrict width on larger screens */
-  margin-left: auto;
-  margin-right: auto;
+@keyframes appear {
+  0% {
+      width: 60vw;
+      height: auto;
+  }
+  25% {
+      width: 70vw;
+      height: 70vh;
+  }
+  50% {
+      width: 80vw;
+      height: 80vh;
+  }
+  75% {
+      width: 90vw;
+      height: 90vh;
+  }
+  100% {
+      width: 100vw;
+      height: 100vh;
+      z-index: 5;
+  }
 }
 
-/* Middle section with 3 images */
-.middle-section {
-  margin-top: 2%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative; 
-  width: 100%;
-  flex-wrap: wrap; /* Wraps the images on smaller screens */
+@keyframes disappearfirstimage{
+  from{
+      width: 80vw;
+      opacity: 1;
+  }
+  to{
+      width: 0;
+      opacity: 0;
+  }
 }
 
-/* Central image */
-.second-image {
-  width: 60vw;
-  height: auto;
-  transition: transform 1s ease; /* Smooth zoom transition */
-  object-fit: cover;
-  margin: 1%; /* Adds some space */
+@keyframes secondsection{
+  from{
+      width: 15vw;
+      opacity: 1;
+  }
+  to{
+      width: 0;
+      opacity: 0;
+  }
 }
 
-/* Left and right images */
-.first-image, .third-image {
-  width: 15vw;
-  height: auto;
-  position: relative;
-  margin: 1%; /* Space between images */
-  transition: transform 1s ease, opacity 1s ease;
-}
+@keyframes extraimages{
+  from{
+      transform: translateY(-100px);
+  }
+  to{
+      transform: translateY(0px);
+      display: contents;
+  }
 
-.first-image {
-  margin-left: auto;
 }
-
-.third-image {
-  margin-right: auto;
-}
-
-/* End section */
-.end-section img {
-  width: 80vw;
-  margin: 2% 0;
-}
-
 .next-div {
   opacity: 0;
   transform: translateY(100px);
@@ -848,9 +917,10 @@ align-items: center; /* Center vertically */
       padding: 30px 0;
     }
 
+    
     .third-image{
       padding: 20px 0;
-      width: 80%;
+      width: 17vw;
       margin-right: 0px;
     }
 
@@ -858,6 +928,8 @@ align-items: center; /* Center vertically */
       display: flex;
     justify-content: center;
     }
+
+    
 
   .s2h{
     font-size: 1.5rem;
@@ -870,4 +942,120 @@ align-items: center; /* Center vertically */
   .collab img {
     max-width: 47%;
   }
+}
+
+
+/* nnnnnnnnnnnnnnnnnnnnnnnnnn */
+
+p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+blockquote {
+  position: relative;
+  padding-left: 1.5rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+  line-height: 1.25;
+  letter-spacing: -0.05rem;
+}
+
+blockquote:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  background-color: #A9DFBF;
+  border-radius: 60px;
+}
+
+figure {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+.hero {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.hero:nth-child(1) figure { background-image: url('slider images/out-s001.jpg'); }
+.hero:nth-child(2) figure { background-image: url('slider images/out-s002.jpg'); }
+.hero:nth-child(3) figure { background-image: url('slider images/out-s003.jpg'); }
+.hero:nth-child(4) figure { background-image: url('slider images/out-s001.jpg'); }
+.hero:nth-child(5) figure { background-image: url('slider images/out-s005.jpg'); }
+.hero:nth-child(6) figure { background-image: url('slider images/out-s006.jpg'); }
+.hero:nth-child(7) figure { background-image: url('slider images/out-s007.jpg'); }
+
+.hero-inner {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  clip: rect(0, auto, auto, 0);
+}
+
+@supports (-webkit-overflow-scrolling: touch) {
+  .hero-inner {
+    clip: unset;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}
+
+.hero__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 8vw;
+  letter-spacing: -0.125rem;
+  text-align: center;
+}
+
+@media (min-width: 1200px) {
+  .hero__title {
+    font-size: 6rem;
+  }
+}
+
+/* More Info Button Style */
+.more-info-btn1{
+  display: block;
+  position: fixed;
+  top: 54%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 25px;
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  cursor: pointer;
+  border-radius: 40px;
+  font-size: 1.5rem;
+  z-index: 1;
+}
+
+.more-info-btn1:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.head{
+    position: fixed;
+    top: 45%;
+    color: black;
 }

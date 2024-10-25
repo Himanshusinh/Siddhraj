@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Carousel</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f3f3f3;
+    }
+
+    .carousel {
+      position: relative;
+      overflow: hidden;
+      height: 70vh; /* Adjusted for more space */
+      width: auto;
+    }
+
+    .carousel-images {
+        height: 400px;
+        width: 600px;
+        object-fit: cover;
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel-slide {
+      min-width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease, opacity 0.5s ease; /* Added transition for scaling and opacity */
+      border-radius: 20px; /* Rounded corners */
+    }
+
+    .carousel-slide:not(.active) {
+      transform: scale(0.8); /* Scale down unfocused images */
+      opacity: 0.5; /* Reduced opacity for unfocused images */
+    }
+
+    .carousel-slide.active {
+      transform: scale(1.1); /* Scale up focused image */
+      opacity: 1; /* Full opacity for focused image */
+    }
+
+    .carousel-indicators {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+    }
+
+    .indicator {
+      width: 10px;
+      height: 10px;
+      background-color: #ddd;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .indicator.active {
+      background-color: #333;
+    }
+
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(255, 255, 255, 0.7);
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    .prev {
+      left: 10px;
+    }
+
+    .next {
+      right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="carousel">
+    <button class="prev">&lt;</button>
+    <div class="carousel-images">
+      <img src="slider images/out-s002.jpg" alt="Slide 1" class="carousel-slide active">
+      <img src="slider images/out-s004.jpg" alt="Slide 2" class="carousel-slide">
+      <img src="slider images/out-s001.jpg" alt="Slide 3" class="carousel-slide">
+    </div>
+    <div class="carousel-indicators">
+      <span class="indicator active"></span>
+      <span class="indicator"></span>
+      <span class="indicator"></span>
+    </div>
+  </div>
+
+  <script>
+    const carouselImages = document.querySelector('.carousel-images');
+    const indicators = document.querySelectorAll('.indicator');
+    const prevButton = document.querySelector('.prev');
+    const nextButton = document.querySelector('.next');
+    const slides = document.querySelectorAll('.carousel-slide');
+
+    let currentIndex = 0;
+    const totalSlides = indicators.length;
+
+    function showSlide(index) {
+      console.log(`Showing slide: ${index}`); // Debugging log
+      carouselImages.style.transform = `translateX(-${index * 100}%)`;
+      
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+        if (i === index) {
+          slide.style.opacity = 1; // Ensure focused image has full opacity
+        } else {
+          slide.style.opacity = 0.5; // Set opacity for unfocused images
+        }
+      });
+
+      indicators.forEach((indicator, i) => {
+        indicator.classList.toggle('active', i === index);
+      });
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      showSlide(currentIndex);
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+      showSlide(currentIndex);
+    }
+
+    // Automatically change slide every 3 seconds
+    setInterval(nextSlide, 3000);
+
+    // Manual navigation via indicators
+    indicators.forEach((indicator, index) => {
+      indicator.addEventListener('click', () => {
+        currentIndex = index;
+        showSlide(currentIndex);
+      });
+    });
+
+    // Event listeners for next and previous buttons
+    nextButton.addEventListener('click', nextSlide);
+    prevButton.addEventListener('click', prevSlide);
+
+    // Initialize first slide
+    showSlide(currentIndex);
+  </script>
+</body>
+</html>

@@ -235,3 +235,5 @@ const slides = document.querySelectorAll('.slides img');
         window.lastScrollTop = window.scrollY || document.documentElement.scrollTop;
     });
  
+// JavaScript to toggle the active class for each hero section
+

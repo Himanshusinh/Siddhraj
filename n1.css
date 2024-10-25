@@ -1,0 +1,241 @@
+/* 
+.homepage-sec3 {
+    display: flex;
+    flex-direction: column;
+    background-image: url('graphics/bg1.svg');
+    margin-top: 10%;
+  
+    .first-section{
+      width: 80vw;
+      margin-left: 1%;
+     
+    }
+    .sectionfirstimage{
+        width: 80vw;
+        animation: disappearfirstimage linear;
+        animation-timeline: view();
+        animation-range: entry 100% cover 200%;
+    }
+    
+    .middle-section {
+      margin-top: 2%;
+      position: relative; 
+      display: flex;
+      justify-content: center; 
+      width: 100%;
+    }
+    
+    .second-image {
+      width: 60vw;
+      height: auto;
+      animation: appear linear forwards;
+      animation-timeline: view();
+      animation-range: entry 70% cover 50%;
+    }
+  
+    .extraimage{
+        width: 100vw;
+        height: 100vh;
+        display: none;
+        animation: extraimages linear forwards;
+        animation-timeline: view();
+        animation-range: enter 0% cover 40%;
+        z-index: 6;
+    }
+    
+    .first-image, .third-image {
+      position: absolute;
+      bottom: 0; 
+      width: 15vw;
+      height: auto; 
+      animation: secondsection linear;
+      animation-timeline: view();
+      animation-range: entry 0% cover 50%;
+    }
+  
+    .first-image {
+      left: 0;
+      margin-left: 1%;
+    }
+    
+    .third-image {
+      right: 0;
+      margin-right: 1%; 
+    }
+  
+    .end-section img{
+      margin: 2%  0 0 23%;
+    }
+  }
+  
+  @keyframes appear {
+    0% {
+        width: 60vw;
+        height: auto;
+    }
+    25% {
+        width: 70vw;
+        height: 70vh;
+    }
+    50% {
+        width: 80vw;
+        height: 80vh;
+    }
+    75% {
+        width: 90vw;
+        height: 90vh;
+    }
+    100% {
+        width: 100vw;
+        height: 100vh;
+        z-index: 5;
+    }
+  }
+  
+  @keyframes disappearfirstimage{
+    from{
+        width: 80vw;
+        opacity: 1;
+    }
+    to{
+        width: 0;
+        opacity: 0;
+    }
+  }
+  
+  @keyframes secondsection{
+    from{
+        width: 15vw;
+        opacity: 1;
+    }
+    to{
+        width: 0;
+        opacity: 0;
+    }
+  }
+  
+  @keyframes extraimages{
+    from{
+        transform: translateY(-100px);
+    }
+    to{
+        transform: translateY(0px);
+        display: contents;
+    }
+  
+  } */
+
+  /* Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Hidden Class */
+  .hidden {
+    display: none;
+  }
+  
+  /* First Section Styles */
+  .homepage-sec3 {
+    display: flex;
+    flex-direction: column;
+    background-image: url('graphics/bg1.svg');
+    margin-top: 10%;
+  }
+  
+  .first-section img,
+  .middle-section img,
+  .end-section img {
+    width: 80vw;
+    margin-left: 1%;
+  }
+  
+  .middle-section {
+    margin-top: 2%;
+    position: relative; 
+    display: flex;
+    justify-content: center; 
+    width: 100%;
+  }
+  
+  .first-image, .third-image {
+    position: absolute;
+    bottom: 0;
+    width: 15vw;
+    animation: secondsection linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
+  }
+  
+  .second-image {
+    width: 60vw;
+    animation: appear linear forwards;
+    animation-timeline: view();
+    animation-range: entry 70% cover 50%;
+  }
+  
+  .first-image {
+    left: 0;
+    margin-left: 1%;
+  }
+  
+  .third-image {
+    right: 0;
+    margin-right: 1%;
+  }
+  
+  @keyframes appear {
+    0% { width: 60vw; }
+    100% { width: 100vw; height: 100vh; z-index: 5; }
+  }
+  
+  @keyframes secondsection {
+    from { width: 15vw; opacity: 1; }
+    to { width: 0; opacity: 0; }
+  }
+  
+  /* Second Section (Hero Sections) Styles */
+  .hero {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .hero:nth-child(1) figure { background-image: url('slider images/out-s001.jpg'); }
+  .hero:nth-child(2) figure { background-image: url('slider images/out-s002.jpg'); }
+  /* Repeat for other figures */
+  
+  .hero-inner {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .hero__title {
+    position: fixed;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 8vw;
+    text-align: center;
+  }
+  
+  .more-info-btn {
+    position: fixed;
+    top: 54%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 25px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    cursor: pointer;
+    border-radius: 40px;
+    font-size: 1.5rem;
+    z-index: 1;
+  }
+  

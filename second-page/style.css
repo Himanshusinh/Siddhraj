@@ -370,6 +370,7 @@ footer {
     }
   
     .footer-left, .footer-nav, .footer-newsletter, .footer-social {
+      text-align: center;
         margin-bottom: 20px;
     }
   
@@ -389,6 +390,108 @@ footer {
   }
 
   @media (max-width: 768px) {
+
+    .first-section {
+      & .logo {
+          img {
+              width: 100px;
+              height: auto;
+              left:34%;
+          }
+        }
+      }
+
+      .first-section {
+        & .logo {
+            h1 {
+                color: #fff;
+                position: absolute;
+                z-index: 1;
+                top: 46%;
+                left: 26%;
+                font-size: 40px;
+                font-weight: 200;
+                font-family: "Baloo Bhaijaan 2", system-ui;
+                text-shadow: 2px 2px 8px #333;
+            }
+        }
+    }
+
+    .first-section {
+      & .text {
+          h1 {
+            margin-top: 220%;
+            font-size: 32px;
+            font-weight: 400;
+            color: #696969;
+            padding: 10%;
+
+          }
+        }
+      }
+
+
+      .first-section {
+        .content {
+            display: flex;
+            flex-direction: column;
+        }
+      }
+
+      .first-section {
+        & .content {
+            & .tilted-text {
+                h1 {
+                    color: #dedede;
+                    font-weight: 400;
+                    font-family: "Archivo Black", sans-serif;
+                    font-size: 41px;
+                    rotate: none;
+                    padding: 10%;
+                    letter-spacing: 5px;
+                }
+            }
+        }
+    }
+
+    .first-section {
+      & .content {
+          & .flex-col {
+              & .content-text {
+                  p {
+                      padding: 10%;
+                  }
+              }
+          }
+      }
+  }
+
+  .a-tag{
+    visibility: hidden;
+  }
+
+  .location {
+    & .image {
+        img {
+            padding: 10%;
+            object-fit: cover;
+            width: auto;
+            height: 321px;
+        }
+    }
+}
+    
+
+
+    .first-section {
+      img {
+          position: absolute;
+          object-fit: cover;
+          height: 100vh;
+      }
+  }
+
+
     .first-section{
       background-image: none;
     }
@@ -439,3 +542,92 @@ footer {
 }
 
 /* responsive text area */
+
+@media (min-width: 768px) and (max-width: 1024px){
+
+  .first-section {
+    img {
+        position: relative;
+        object-fit: cover;
+        width: 100vw;
+        height: 100vh;
+    }
+}
+
+.first-section {
+  & .logo {
+      h1 {
+          color: #fff;
+          position: absolute;
+          z-index: 1;
+          top: 43%;
+          left: 31%;
+          font-size: 70px;
+          font-weight: 200;
+          font-family: "Baloo Bhaijaan 2", system-ui;
+          text-shadow: 2px 2px 8px #333;
+      }
+  }
+}
+
+.first-section {
+  .content {
+      display: flex;
+      background-color: #fff;
+      flex-direction: column;
+  }
+}
+
+.first-section {
+  & .content {
+      & .tilted-text {
+          h1 {
+            rotate: none;
+            padding: 10% 20%;
+            text-align: center;
+
+          }
+        }
+      }
+    }
+
+
+    .first-section {
+      & .content {
+          & .flex-col {
+              & .content-text {
+                  p {
+                      padding: 10%;
+                  }
+              }
+          }
+      }
+  }
+
+  .a-tag{
+    visibility: hidden;
+  }
+
+  .location {
+    & .image {
+        img {
+            object-fit: cover;
+            width: 93vw;
+            height: 32vh;
+        }
+    }
+}
+
+.first-section {
+  & .logo {
+      img {
+          left: 34%;
+          width: auto;
+          height: auto;
+          position: absolute;
+          z-index: 1;
+          margin: 3%;
+      }
+  }
+}
+}

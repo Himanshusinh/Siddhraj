@@ -156,5 +156,82 @@ const slides = document.querySelectorAll('.slides img');
 
 
 
-
+    let hasZoomedIn = false; // Track if the second image has fully zoomed in
+    let zoomingOut = false; // Track if zoom-out has started
+    let zoomDelayTimeout; // Timeout for delaying the zoom effect
+    
+    window.addEventListener('scroll', function () {
+        const secondImage = document.getElementById('second-image');
+        const allImages = document.querySelectorAll('.homepage-sec3 img');
+        const viewportHeight = window.innerHeight;
+        const viewportWidth = window.innerWidth;
+        const endSection = document.querySelector('.end-section');
+        const nextDiv = document.querySelector('.next-div');
+        const endSectionRect = endSection.getBoundingClientRect();
+    
+        // Check if the end section is in the viewport to start the zoom-in effect
+        if (endSectionRect.top < viewportHeight && endSectionRect.bottom > 0 && !zoomingOut) {
+            clearTimeout(zoomDelayTimeout); // Clear previous timeout to avoid overlap
+    
+            zoomDelayTimeout = setTimeout(() => {
+                // Zoom from the original size of the image
+                secondImage.style.transition = 'transform 2s ease 0.5s'; // Smooth zoom-in with delay
+                secondImage.style.transform = 'scale(1)';  // Zoom to 2x (or adjust as needed)
+    
+                // Shrink and fade out other images
+                allImages.forEach((img) => {
+                    if (img !== secondImage) {
+                        img.style.transform = 'scale(0)'; // Shrink other images to 0
+                        img.style.opacity = '0'; // Fade out other images
+                        img.style.transition = 'transform 2s ease 0.5s, opacity 2s ease 0.5s'; // Smooth with delay
+                    }
+                });
+    
+                if (!hasZoomedIn) {
+                    // Fix the second image in place once it's zoomed in
+                    secondImage.style.position = 'fixed';
+                    secondImage.style.top = '0';
+                    secondImage.style.left = '0';
+                    secondImage.style.width = '100vw';  // Ensure it covers the entire screen
+                    secondImage.style.height = '100vh';
+                    secondImage.style.objectFit = 'cover';  // Maintain aspect ratio
+                    secondImage.style.zIndex = '10';
+                    hasZoomedIn = true;
+                }
+            }, 500); // Delay the zoom animation by 0.5 seconds
+        }
+    
+        // Check if the user scrolls past and initiate zoom-out
+        if (hasZoomedIn && endSectionRect.bottom < 0) {
+            zoomingOut = true; // Set zoom-out flag
+    
+            clearTimeout(zoomDelayTimeout); // Clear the delay when zooming out
+    
+            // Apply zoom-out to the second image with smooth animation
+            secondImage.style.transition = 'transform 2s ease 0.5s'; // Smooth zoom-out with delay
+            secondImage.style.transform = 'scale(1)'; // Reset to original size
+            secondImage.style.position = 'absolute'; // Remove fixed positioning
+            secondImage.style.top = ''; // Reset top
+            secondImage.style.left = ''; // Reset left
+            secondImage.style.width = '60vw'; // Reset the original width
+            secondImage.style.height = 'auto'; // Reset height
+            secondImage.style.zIndex = '1'; // Reset z-index
+    
+            // Bring back the other images
+            allImages.forEach((img) => {
+                img.style.transform = 'scale(1)';
+                img.style.opacity = '1';
+                img.style.transition = 'transform 2s ease 0.5s, opacity 2s ease 0.5s'; // Smooth reset
+            });
+    
+            // Once zoom-out completes, reset the zoom state
+            setTimeout(() => {
+                zoomingOut = false;
+                hasZoomedIn = false; // Reset the zoom state
+            }, 1000); // Delay ensures smooth reset after zoom-out
+        }
+    
+        // Update last scroll position
+        window.lastScrollTop = window.scrollY || document.documentElement.scrollTop;
+    });
  

@@ -110,7 +110,8 @@
 .slides {
     position: relative;
     display: flex;
-    width: 100%; /* 100% per image */
+    object-fit: cover;
+    width: 100vw; /* 100% per image */
     transition: transform 0.8s ease-in-out;
 }
 

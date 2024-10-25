@@ -421,7 +421,7 @@ footer {
     .first-section {
       & .text {
           h1 {
-            margin-top: 220%;
+            margin-top: 2%;
             font-size: 32px;
             font-weight: 400;
             color: #696969;
@@ -486,7 +486,7 @@ footer {
 
     .first-section {
       img {
-          position: absolute;
+          position: relative;
           object-fit: cover;
           height: 100vh;
       }

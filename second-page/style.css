@@ -5,7 +5,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow-x: clip;
+    max-width: 100%;
+   
+    
 }
 
 .first-section{
@@ -36,6 +38,7 @@
         position: relative;
         width: 100vw;
         height: 100%;
+        overflow-x: clip;
     }
 
     .text{
@@ -54,6 +57,7 @@
     }
 
     .content{
+      
         display: flex;
         background-color: #fff;
 
@@ -100,7 +104,7 @@
 }
 
 /* second-section */
-.slide-container {
+/* .slide-container {
     position: relative;
     width: 100%;
     height: 100vh;
@@ -111,18 +115,18 @@
     position: relative;
     display: flex;
     object-fit: cover;
-    width: 100vw; /* 100% per image */
+    width: 100vw; 
     transition: transform 0.8s ease-in-out;
 }
 
 .slides img {
-    flex: 0 0 100%; /* Each image takes 100% width */
+    flex: 0 0 100%; 
     object-fit: cover;
     height: 100vh;
 }
 
 .slides img.side {
-    flex: 0 0 0%; /* Hidden images take 0% of the space */
+    flex: 0 0 0%; 
     transition: flex 0.8s ease-in-out;
 }
 
@@ -166,11 +170,92 @@ span.prev {
 
 .dotsContainer .dot.active {
     background-color: #555;
+} */
+
+.boxslider9 {
+  
+  position: relative;
+  overflow: hidden;
+  width: 98vw; /* Adjusted width for visibility of adjacent images */
+  height: 104vh; /* Keeps aspect ratio */
+}
+
+.boxslider-images9 {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.boxslider-slide9 {
+  position: relative;
+  left: 18%;
+  min-width: 60%; /* Makes the central image take most of the space */
+  height: 60vh;
+  margin: 0 2vw; /* Spacing to show the adjacent images */
+  object-fit: cover;
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Added transition for scaling and opacity */
+  border-radius: 20px; /* Rounded corners */
+}
+
+@media (max-width: 767px) {
+  .boxslider-slide9 {
+    height: 45vh;
+  }
+}
+
+.boxslider-slide9:not(.active9) {
+  transform: scale(0.8); /* Scale down unfocused images */
+  opacity: 0.5; /* Reduced opacity for unfocused images */
+}
+
+.boxslider-slide9.active9 {
+  transform: scale(1); /* Center image remains at full size */
+  opacity: 1; /* Full opacity for focused image */
+}
+
+.boxslider-indicators9 {
+  visibility: hidden;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.indicator9 {
+  width: 10px;
+  height: 10px;
+  background-color: #ddd;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.indicator9.active9 {
+  background-color: #333;
+}
+
+.prev9, .next9 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.prev9 {
+  left: 10px;
+}
+
+.next9 {
+  right: 10px;
 }
 
 /* location */
 
 .location{
+  overflow-x: clip;
     background-image: url('../graphics/bg1.svg');
     h1{
         display: flex;
@@ -489,6 +574,8 @@ footer {
           position: relative;
           object-fit: cover;
           height: 100vh;
+          max-width: 100%;
+          width: auto;
       }
   }
 

@@ -19,6 +19,9 @@ document.addEventListener('DOMContentLoaded', function() {
             navBackground.classList.remove('open'); // Hide background
         }
     });
+
+    
+    
 });
 
 // // Code for the canvas animations
@@ -236,4 +239,5 @@ const slides = document.querySelectorAll('.slides img');
     });
  
 // JavaScript to toggle the active class for each hero section
+
 

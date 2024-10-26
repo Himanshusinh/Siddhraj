@@ -91,7 +91,7 @@ figure {
   }
 }
 
-/* More Info Button Style */
+/* More Info Button Style
 .more-info-btn1{
   display: block;
   position: fixed;
@@ -110,7 +110,7 @@ figure {
 
 .more-info-btn1:hover {
   background-color: rgba(255, 255, 255, 0.1);
-}
+} */
 
 .head{
     position: fixed;

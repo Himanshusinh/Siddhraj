@@ -22,24 +22,31 @@
     .carousel {
       position: relative;
       overflow: hidden;
-      height: 70vh; /* Adjusted for more space */
-      width: auto;
+      width: 98vw; /* Adjusted width for visibility of adjacent images */
+      height: 68vh; /* Keeps aspect ratio */
     }
+    
 
     .carousel-images {
-        height: 400px;
-        width: 600px;
-        object-fit: cover;
       display: flex;
       transition: transform 0.5s ease-in-out;
     }
 
     .carousel-slide {
-      min-width: 100%;
-      height: 100%;
+      position: relative;
+      left: 18%;
+      min-width: 60%; /* Makes the central image take most of the space */
+      height: 60vh;
+      margin: 0 2vw; /* Spacing to show the adjacent images */
       object-fit: cover;
       transition: transform 0.5s ease, opacity 0.5s ease; /* Added transition for scaling and opacity */
       border-radius: 20px; /* Rounded corners */
+    }
+
+    @media (max-width: 767px){
+      .carousel-slide{
+        height: 45vh;
+      }
     }
 
     .carousel-slide:not(.active) {
@@ -48,11 +55,12 @@
     }
 
     .carousel-slide.active {
-      transform: scale(1.1); /* Scale up focused image */
+      transform: scale(1); /* Center image remains at full size */
       opacity: 1; /* Full opacity for focused image */
     }
 
     .carousel-indicators {
+      visibility: hidden;
       position: absolute;
       bottom: 10px;
       left: 50%;
@@ -118,16 +126,11 @@
     const totalSlides = indicators.length;
 
     function showSlide(index) {
-      console.log(`Showing slide: ${index}`); // Debugging log
-      carouselImages.style.transform = `translateX(-${index * 100}%)`;
+      carouselImages.style.transform = `translateX(-${index * 64}%)`; /* Adjusted to keep partial visibility of adjacent images */
       
       slides.forEach((slide, i) => {
         slide.classList.toggle('active', i === index);
-        if (i === index) {
-          slide.style.opacity = 1; // Ensure focused image has full opacity
-        } else {
-          slide.style.opacity = 0.5; // Set opacity for unfocused images
-        }
+        slide.style.opacity = i === index ? '1' : '0.5'; /* Set opacity for focused and unfocused images */
       });
 
       indicators.forEach((indicator, i) => {

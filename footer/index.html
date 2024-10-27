@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer Design</title>
+
+    <style>
+        /* General Footer Styling with Gradient Background */
+        footer {
+            background: linear-gradient(to bottom, #DEDEDE, #ffffff); /* Light to darker gradient */
+            padding: 80px 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Logo and Contact Information Styling */
+        .footer-left {
+            text-align: left;
+            flex: 1;
+        }
+
+        .footer-logo img {
+            max-width: 150px;
+            margin-bottom: 15px;
+        }
+
+        .footer-contact p {
+            margin: 5px 0;
+            color: #333;
+            font-size: 14px;
+        }
+
+        .footer-contact p:first-child {
+            margin-top: 10px;
+        }
+
+        .footer-contact strong {
+            display: block;
+            margin-top: 15px;
+        }
+
+        /* Navigation Section Styling */
+        .footer-nav {
+            text-align: left;
+            flex: 1;
+            margin: 65px 0;
+          
+        }
+
+        .footer-nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-nav ul li {
+            margin: 10px 0;
+        }
+
+        .footer-nav ul li a {
+            color: #333;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        .footer-nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Newsletter Section Styling */
+        .footer-newsletter {
+            text-align: left;
+            flex: 1;
+            margin-top: 50px;
+        }
+
+        .footer-newsletter h4 {
+            font-weight: normal;
+            color: gray;
+            font-size: 14px;
+        }
+
+        .footer-newsletter h4 span {
+            font-weight: bold;
+            color: #555;
+            font-size: 20px;
+            position: relative;
+        }
+
+        .footer-newsletter h4 span::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 100%;
+           
+        }
+
+        .footer-newsletter form {
+            display: flex;
+            margin-top: 15px;
+        }
+
+        .footer-newsletter input {
+            padding: 10px;
+            border: 0px solid #ccc;
+            border-radius: 10px 0 0 10px;
+            width: 70%;
+            font-size: 14px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer-newsletter button {
+            padding: 10px 20px;
+            background-color: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+
+        /* Social Media Icons Styling */
+        .footer-social {
+            text-align: right;
+            flex: 1;
+        }
+
+        .footer-social a {
+            margin-right: 10px;
+            color: black;
+            font-size: 18px;
+            text-decoration: none;
+        }
+
+        .footer-social i {
+            margin: 0 5px;
+        }
+
+        /* Bottom Section */
+        .footer-bottom {
+            text-align: center;
+            margin-top: 30px;
+            border-top: 1px solid #ccc;
+            padding-top: 20px;
+        }
+
+        .footer-bottom p, .footer-bottom a {
+            color: #333;
+            text-decoration: none;
+            font-size: 12px;
+            margin: 0 15px;
+        }
+
+        .footer-bottom a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .footer-left, .footer-nav, .footer-newsletter, .footer-social {
+                margin-bottom: 20px;
+            }
+
+            .footer-newsletter form {
+                flex-direction: column;
+            }
+
+            .footer-newsletter input, .footer-newsletter button {
+                width: 100%;
+                margin: 5px 0;
+            }
+        }
+
+        /* Fine-tuning the spacing */
+        .footer-contact, .footer-nav, .footer-newsletter, .footer-social {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <footer>
+        <div class="footer-container">
+            <!-- Logo and Contact Information -->
+            <div class="footer-left">
+                <div class="footer-logo">
+                    <img src="ssss.png" alt="SIDDHRAJ Logo">
+                </div>
+                <div class="footer-contact">
+                    <p>+91 079232 49792</p>
+                    <p>+91 99099 01122</p>
+                    <strong>Work</strong>
+                    <p>info@siddhrajinfra.com</p>
+                    <strong>Inquiry</strong>
+                    <p>inquiry@siddhrajinfra.com</p>
+                </div>
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="footer-nav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Project</a></li>
+                    <li><a href="#">Company Profile</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Newsletter Form -->
+            <div class="footer-newsletter">
+                <h4>GET IN <span>TOUCH</span></h4>
+                <form>
+                    <input type="email" placeholder="EMAIL...">
+                    <button type="submit">SUBMIT</button>
+                </form>
+            </div>
+
+            <!-- Social Media Icons -->
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p>&copy; 2024 SIDDHRAJ INFRA LTD.</p>
+            <a href="#">Disclaimer</a> | <a href="#">Privacy Policy</a>
+        </div>
+    </footer>
+
+    <!-- Font Awesome for Social Icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+
+</body>
+</html>

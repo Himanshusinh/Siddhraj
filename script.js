@@ -100,12 +100,12 @@ const slides = document.querySelectorAll('.slides img');
 
     // Titles and Descriptions for each slide
     const titles = [
-      "Title 1", "Title 2", "Title 3", "Title 4", "Title 5", "Title 6", "Title 7"
+      "Zoey", "Siddhraj Z2", "Siddhraj Z+", "Siddhraj Zavod", "Zold", "Siddhraj Zori", "greens"
     ];
 
     const descriptions = [
-      "Description for Image 1", "Description for Image 2", "Description for Image 3", 
-      "Description for Image 4", "Description for Image 5", "Description for Image 6", "Description for Image 7"
+      "Contemporary Comfort with Integrated Green Living", " Elevating Workspaces with Luxurious Amenities and Green Spaces", "A Fusion of Tradition and Modernity for Secure Living", 
+      "Innovative Business Park for Dynamic Work Environments", "Luxury Living in a Harmonious Blend of Nature and Sophistication", "Strategically Designed Spaces for Optimal Commercial Success", ""
     ];
 
     let currentIndex = 0;

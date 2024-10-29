@@ -6,12 +6,117 @@
     padding: 0;
     box-sizing: border-box;
     max-width: 100%;
-   
-    
+  
+}
+
+
+.header-class{
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.header-class img {
+  height: 75px;
+  margin-left: 30px;
+}
+
+
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+
+/* header  */
+header {
+height: 200vh;
+}
+
+.container {
+clip: rect(0, auto, auto, 0);
+overflow: hidden;
+position: absolute;
+height: 100vh;
+left: 0;
+width: 100%;
+-webkit-mask-image: -webkit-linear-gradient(top, #ffffff 0%,#ffffff 100%);
+}
+
+.container_solid {
+background: #eeeeee;
+top: 0;
+}
+
+.title_wrapper {
+position: fixed;
+display: block;  
+margin: auto;
+width: 100%;
+top: 50%;
+-webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+}
+
+
+.title_wrapper h1 {
+text-align: center;
+font-size: 64px;
+text-transform: uppercase;
+text-align: center;
+font-family: "Poppins", sans-serif;
+font-weight: 900;
+letter-spacing: 0.3cap;
+}
+
+.container_solid .title_wrapper h1 {
+background: url('https://firebasestorage.googleapis.com/v0/b/siddhraj-fd6ac.appspot.com/o/mainpage%2Fsliderimages%2FCopy%20of%20zold%2005.jpg?alt=media&token=0bd3ed0f-ecaa-4016-8ab5-a34e4d10d9d0');
+background-size: 100vw auto;
+background-position: center;
+
+text-fill-color: transparent;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+-webkit-background-clip: text;
+
+/* fallback text color */
+color: black;
+}
+
+.container_image {
+/* Grab a free image from unsplash */
+background-image: url('https://firebasestorage.googleapis.com/v0/b/siddhraj-fd6ac.appspot.com/o/mainpage%2Fsliderimages%2FCopy%20of%20zold%2005.jpg?alt=media&token=0bd3ed0f-ecaa-4016-8ab5-a34e4d10d9d0');
+background-size:100vw auto;
+background-position: center;
+background-attachment: fixed;
+
+/* position the second container below the first container */
+top: 100vh;
+}
+
+.container_image .title_wrapper h1 {
+color: white;
 }
 
 .first-section{
     background-image: url('../graphics/bg1.svg') ;
+
+
+    .logo{
+      width: 200px;
+      height: 80px;
+    }
 
     .logo{
         img{
@@ -22,11 +127,12 @@
             margin: 3% 0 0 3%;
         }
         h1{
+            
             color: #fff;
             position: absolute;
             z-index: 1;
             top: 40%;
-            left: 40%;
+            left: 48%;
             font-size: 120px;
             font-weight: 200;
             font-family: "Baloo Bhaijaan 2", system-ui;
@@ -43,6 +149,7 @@
 
     .text{
         h1{
+            background-image: url('https://firebasestorage.googleapis.com/v0/b/siddhraj-fd6ac.appspot.com/o/mainpage%2Fsliderimages%2Fbg1.svg?alt=media&token=712ec882-59b9-49ce-aeff-8d14ac7a926f');
             font-size: 50px;
             font-weight: 400;
             color: #fff;
@@ -59,11 +166,11 @@
     .content{
       
         display: flex;
-        background-color: #fff;
+        background-image: url('https://firebasestorage.googleapis.com/v0/b/siddhraj-fd6ac.appspot.com/o/mainpage%2Fsliderimages%2Fbg1.svg?alt=media&token=712ec882-59b9-49ce-aeff-8d14ac7a926f');
 
         .tilted-text{
             h1{
-                color: #dedede;
+                color: #ffffff;
                 font-weight: 400;
                 font-family: "Archivo Black", sans-serif;
                 font-size: 70px;
@@ -284,7 +391,7 @@ span.prev {
         justify-content: center;
         align-items: center;
 
-        img{
+        iframe{
             width: 90vw;
             height: 90vh;
         }
@@ -295,191 +402,189 @@ span.prev {
 
 /* footer  */
 footer {
-    background: linear-gradient(to bottom, #DEDEDE, #ffffff); /* Light to darker gradient */
-    padding: 80px 0;
-    font-family: Arial, sans-serif;
-  }
-  
+  background: linear-gradient(to bottom, #FFFFFF, #aaaaaa); /* Light to darker gradient */
+  padding: 80px 0;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Logo and Contact Information Styling */
+.footer-left {
+  text-align: left;
+  flex: 1;
+}
+
+.footer-logo img {
+  max-width: 150px;
+  margin-bottom: 15px;
+}
+
+.footer-contact p {
+  margin: 5px 0;
+  color: #333;
+  font-size: 14px;
+}
+
+.footer-contact p:first-child {
+  margin-top: 10px;
+}
+
+.footer-contact strong {
+  display: block;
+  margin-top: 15px;
+}
+
+/* Navigation Section Styling */
+.footer-nav {
+  text-align: left;
+  flex: 1;
+  margin: 65px 0;
+
+}
+
+.footer-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-nav ul li {
+  margin: 10px 0;
+}
+
+.footer-nav ul li a {
+  color: #333;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.footer-nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Newsletter Section Styling */
+.footer-newsletter {
+  text-align: left;
+  flex: 1;
+  margin-top: 50px;
+}
+
+.footer-newsletter h4 {
+  font-weight: normal;
+  color: gray;
+  font-size: 14px;
+}
+
+.footer-newsletter h4 span {
+  font-weight: bold;
+  color: #555;
+  font-size: 20px;
+  position: relative;
+}
+
+.footer-newsletter h4 span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+ 
+}
+
+.footer-newsletter form {
+  display: flex;
+  margin-top: 15px;
+}
+
+.footer-newsletter input {
+  padding: 10px;
+  border: 0px solid #ccc;
+  border-radius: 10px 0 0 10px;
+  width: 70%;
+  font-size: 14px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.footer-newsletter button {
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 0 10px 10px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Social Media Icons Styling */
+.footer-social {
+  text-align: right;
+  flex: 1;
+}
+
+.footer-social a {
+  margin-right: 10px;
+  color: black;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.footer-social i {
+  margin: 0 5px;
+}
+
+/* Bottom Section */
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
+}
+
+.footer-bottom p, .footer-bottom a {
+  color: #333;
+  text-decoration: none;
+  font-size: 12px;
+  margin: 0 15px;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .footer-container {
-    
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100vw;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-  
-  /* Logo and Contact Information Styling */
-  .footer-left {
-    text-align: left;
-    flex: 1;
-  }
-  
-  .footer-logo img {
-    max-width: 150px;
-    margin-bottom: 15px;
-  }
-  
-  .footer-contact p {
-    margin: 5px 0;
-    color: #333;
-    font-size: 14px;
-  }
-  
-  .footer-contact p:first-child {
-    margin-top: 10px;
-  }
-  
-  .footer-contact strong {
-    display: block;
-    margin-top: 15px;
-  }
-  
-  /* Navigation Section Styling */
-  .footer-nav {
-    text-align: left;
-    flex: 1;
-    margin: 65px 0;
-  
-  }
-  
-  .footer-nav ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .footer-nav ul li {
-    margin: 10px 0;
-  }
-  
-  .footer-nav ul li a {
-    color: #333;
-    font-size: 14px;
-    text-decoration: none;
-  }
-  
-  .footer-nav ul li a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Newsletter Section Styling */
-  .footer-newsletter {
-    text-align: left;
-    flex: 1;
-    margin-top: 50px;
-  }
-  
-  .footer-newsletter h4 {
-    font-weight: normal;
-    color: gray;
-    font-size: 14px;
-  }
-  
-  .footer-newsletter h4 span {
-    font-weight: bold;
-    color: #555;
-    font-size: 20px;
-    position: relative;
-  }
-  
-  .footer-newsletter h4 span::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 100%;
-   
-  }
-  
-  .footer-newsletter form {
-    display: flex;
-    margin-top: 15px;
-  }
-  
-  .footer-newsletter input {
-    padding: 10px;
-    border: 0px solid #ccc;
-    border-radius: 10px 0 0 10px;
-    width: 70%;
-    font-size: 14px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .footer-newsletter button {
-    padding: 10px 20px;
-    background-color: black;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 0 10px 10px 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  
-  /* Social Media Icons Styling */
-  .footer-social {
-    text-align: right;
-    flex: 1;
-  }
-  
-  .footer-social a {
-    margin-right: 10px;
-    color: black;
-    font-size: 18px;
-    text-decoration: none;
-  }
-  
-  .footer-social i {
-    margin: 0 5px;
-  }
-  
-  /* Bottom Section */
-  .footer-bottom {
-    text-align: center;
-    margin-top: 30px;
-    border-top: 1px solid #ccc;
-    padding-top: 20px;
-  }
-  
-  .footer-bottom p, .footer-bottom a {
-    color: #333;
-    text-decoration: none;
-    font-size: 12px;
-    margin: 0 15px;
-  }
-  
-  .footer-bottom a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-  
-    .footer-left, .footer-nav, .footer-newsletter, .footer-social {
+      flex-direction: column;
+      align-items: center;
       text-align: center;
-        margin-bottom: 20px;
-    }
-  
-    .footer-newsletter form {
-        flex-direction: column;
-    }
-  
-    .footer-newsletter input, .footer-newsletter button {
-        width: 100%;
-        margin: 5px 0;
-    }
   }
-  
-  /* Fine-tuning the spacing */
-  .footer-contact, .footer-nav, .footer-newsletter, .footer-social {
-    margin-bottom: 20px;
+
+  .footer-left, .footer-nav, .footer-newsletter, .footer-social {
+      margin-bottom: 20px;
   }
+
+  .footer-newsletter form {
+      flex-direction: column;
+  }
+
+  .footer-newsletter input, .footer-newsletter button {
+      width: 100%;
+      margin: 5px 0;
+  }
+}
+
+/* Fine-tuning the spacing */
+.footer-contact, .footer-nav, .footer-newsletter, .footer-social {
+  margin-bottom: 20px;
+}
+
 
   @media (max-width: 768px) {
 

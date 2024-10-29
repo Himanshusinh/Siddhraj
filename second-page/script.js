@@ -68,6 +68,11 @@
 // });
 
 
+
+
+
+
+
 const boxsliderImages9 = document.querySelector('.boxslider-images9');
 const indicators9 = document.querySelectorAll('.indicator9');
 const prevButton9 = document.querySelector('.prev9');
@@ -75,7 +80,7 @@ const nextButton9 = document.querySelector('.next9');
 const boxslides9 = document.querySelectorAll('.boxslider-slide9');
 
 let currentIndex9 = 0;
-const totalSlides9 = indicators9.length;
+const totalSlides9 = boxslides9.length;
 
 function showSlide9(index) {
   boxsliderImages9.style.transform = `translateX(-${index * 64}%)`; /* Adjusted to keep partial visibility of adjacent images */

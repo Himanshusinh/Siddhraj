@@ -1020,7 +1020,6 @@ z-index: 1; /* Ensure it's visible above images */
   .Background h1{
     font-size: 10px;
     top: 30%;
-    left: 30%;
     margin: 0;
     letter-spacing: 5px;
   }

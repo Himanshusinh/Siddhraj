@@ -1069,7 +1069,9 @@ z-index: 1; /* Ensure it's visible above images */
       max-width: 90vw;
     }
 
-
+    .second-image{
+      padding: 30px 0;
+    }
 
     
     .third-image{

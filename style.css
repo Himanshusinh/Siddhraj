@@ -480,6 +480,7 @@ footer {
   background: linear-gradient(to bottom, #DEDEDE, #ffffff); /* Light to darker gradient */
   padding: 80px 0;
   font-family: Arial, sans-serif;
+  width: 100vw;
 }
 
 .footer-container {

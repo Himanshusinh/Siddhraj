@@ -100,12 +100,22 @@ const slides = document.querySelectorAll('.slides img');
 
     // Titles and Descriptions for each slide
     const titles = [
-      "Zoey", "Siddhraj Z2", "Siddhraj Z+", "Siddhraj Zavod", "Zold", "Siddhraj Zori", "greens"
+      "Zoey", "Siddhraj Z2", "Siddhraj Z+", "Siddhraj Zavod", "Zold", "Siddhraj Zori", "Greens"
     ];
 
     const descriptions = [
-      "Contemporary Comfort with Integrated Green Living", " Elevating Workspaces with Luxurious Amenities and Green Spaces", "A Fusion of Tradition and Modernity for Secure Living", 
-      "Innovative Business Park for Dynamic Work Environments", "Luxury Living in a Harmonious Blend of Nature and Sophistication", "Strategically Designed Spaces for Optimal Commercial Success", ""
+      "Contemporary Comfort with Integrated Green Living", 
+  "Elevating Workspaces with Luxurious Amenities and Green Spaces", 
+  "A Fusion of Tradition and Modernity for Secure Living", 
+  "Innovative Business Park for Dynamic Work Environments", 
+  "Luxury Living in a Harmonious Blend of Nature and Sophistication", 
+  "Strategically Designed Spaces for Optimal Commercial Success", 
+  "Environmentally Conscious and Sustainable Development"
+    ];
+
+    // Links for "More Info" buttons
+    const moreInfoLinks = [
+      "sub-pages/zoey/index.html", "second-page/index.html", "sub-pages/z+/index.html", "sub-pages/zavod/index.html", "sub-pages/zold/index.html", "sub-pages/zori/index.html", "page7.html"
     ];
 
     let currentIndex = 0;
@@ -124,6 +134,9 @@ const slides = document.querySelectorAll('.slides img');
       // Update h1 and h2 text
       h1Title.textContent = titles[index];
       h2Description.textContent = descriptions[index];
+
+      // Update the More Info button's link
+      moreInfoBtn.href = moreInfoLinks[index];
     }
 
     document.getElementById('nextBtn').addEventListener('click', () => {
@@ -150,11 +163,10 @@ const slides = document.querySelectorAll('.slides img');
 
     setInterval(autoSlide, 5000); // Slide every 5 seconds
 
-    moreInfoBtn.addEventListener('click', () => {
-      window.location.href = `page${currentIndex + 1}.html`; // Redirect to different pages based on slide
-    });
+    // Initialize the first slide
+    updateSlide(0);
 
-    updateSlide(0); // Initialize the first slide
+
 
 
 

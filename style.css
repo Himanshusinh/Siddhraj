@@ -308,13 +308,16 @@ canvas {
 /* Keyframes for Desktop (min-width: 1024px) */
 @media (min-width: 1024px) {
   @keyframes appear {
-    from{
+    from {
       width: auto;
       height: 60vh;
+      opacity: 1;
     }
-    to{
+    to {
       width: 100vw;
       height: 100vh;
+      object-fit: cover;
+      opacity: 1;
     }
   }
 

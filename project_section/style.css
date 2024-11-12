@@ -69,7 +69,7 @@ header {
 
 .container_solid .title_wrapper h1 {
   /* the text background */
-  background: url("/slider images/out-s001.jpg");
+  background: url("https://firebasestorage.googleapis.com/v0/b/siddhraj-fd6ac.appspot.com/o/project-section-images%2Fout-s001.jpg?alt=media&token=75cb2a57-a0cb-417c-852d-59de40af8e4a");
   background-size: 100vw auto;
   background-position: center;
   
@@ -85,7 +85,7 @@ header {
 
 .container_image {
   /* Grab a free image from unsplash */
-  background-image: url("/slider images/out-s001.jpg");
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/siddhraj-fd6ac.appspot.com/o/project-section-images%2Fout-s001.jpg?alt=media&token=75cb2a57-a0cb-417c-852d-59de40af8e4a");
   background-size:100vw auto;
   background-position: center;
   background-attachment: fixed;

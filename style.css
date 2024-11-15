@@ -223,6 +223,7 @@ canvas {
 
 /* homepage-sec3 */
 .homepage-sec3 {
+  overflow-x: clip;
   min-width: 100vw;
   display: flex;
   flex-direction: column;
@@ -283,11 +284,11 @@ canvas {
 @keyframes appear {
   from{
     width: 60vw;
-    height: 60vh;
+    height: auto;
   }
   to{
     width: 100vw;
-    height: 100vh;
+    height: auto;
   }
 }
 

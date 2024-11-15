@@ -23,6 +23,14 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+function downloadPDF() {
+  // Replace 'your-file-id' with the actual Google Drive file ID
+  const fileID = 'your-file-id';
+  const downloadLink = `https://drive.google.com/file/d/1k_u5JSPaA7JiqRncsKih8HRFrL12Om35/view?usp=drive_link`;
+  window.open(downloadLink, '_blank');
+}
+
+
 
 
 

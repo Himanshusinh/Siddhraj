@@ -493,13 +493,11 @@ header {
     align-items: center;
     justify-content: center;
  }
-
  footer {
-    background: linear-gradient(to bottom, #DEDEDE, #ffffff); /* Light to darker gradient */
-    padding: 80px 0;
-    font-family: "Lato", sans-serif;
+  background: linear-gradient(to bottom, #ffffff, #c3c3c3); /* Light to darker gradient */
+  padding: 80px 0;
+  font-family: "Lato", sans-serif;
 }
-
 .footer-container {
     display: flex;
     justify-content: space-between;
@@ -688,6 +686,7 @@ header {
   position: relative;
   .images{
       display: flex;
+      justify-content: space-between;
       width: 100vw;
       height: 100vh;
       gap: 70px;
@@ -701,6 +700,8 @@ header {
 
   .texts{
       display: flex;
+      
+      flex-direction: column;
       position: absolute;
       bottom: 0;
       font-family: "Lato", sans-serif;
@@ -717,7 +718,7 @@ header {
           margin: 4% 0 0 0;
           a{
               font-weight: 600;
-              margin: 0 0 -7% 30%;
+              margin: 5% 0 0% 30%;
               
           }
       }
@@ -726,7 +727,7 @@ header {
         font-family: "Lato", sans-serif;
           font-size: 12px;
           font-weight: 300;
-          margin: 20% 0 2% 30%;
+         
           word-spacing: 1cap;
       }
   }
@@ -858,6 +859,7 @@ header {
 
   .texts{
       display: flex;
+      text-align: center;
       justify-content: center;
       padding: 2% 10% 2% 10% ;
       font-size: 20px;
@@ -900,6 +902,7 @@ header {
       
       p{
         font-family: "Lato", sans-serif;
+        text-align: center;
           padding: 5% 25% 5% 25%;
           word-spacing: 1cap;
 
@@ -927,6 +930,10 @@ header {
 }
 
 @media (max-width: 768px) {
+  .ht{
+    font-size: 50px;
+    text-align: center;
+  }
 
   .section {
     .images {
@@ -1011,6 +1018,15 @@ header {
   }
 }
 
+.page-4 {
+  & .mission {
+      & .flex-col {
+          p {
+              margin: -4% 0 0 -18%;
+          }
+      }
+  }
+}
 .page-3 {
   & .texts {
       p {
@@ -1041,6 +1057,7 @@ header {
 .page-4 {
   & .mission {
       .flex-col {
+        margin: 10% 0 0 0%;
           display: flex;
           flex-direction: column;
           /* margin: 10% 0 0 10%; */
@@ -1052,7 +1069,21 @@ header {
   & .mission {
       & .flex-col {
           h1 {
-              font-size: 80px;
+            text-align: center;
+              font-size: 59px;
+              font-family: "Lato", sans-serif;
+              font-weight: 300;
+          }
+      }
+  }
+}
+
+.page-4 {
+  & .vision {
+      & .flex-col {
+          h1 {
+            text-align: center;
+              font-size: 59px;
               font-family: "Lato", sans-serif;
               font-weight: 300;
           }
@@ -1436,3 +1467,5 @@ header {
 
 
 }
+
+

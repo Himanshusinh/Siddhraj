@@ -780,7 +780,7 @@ z-index: 3; /* Ensure it's visible above images */
 
 @media (max-width: 768px) {
   h1 {
-    font-size: 2.5rem;
+    font-size: 1rem;
   }
   h2 {
     font-size: 1.2rem;
@@ -1182,7 +1182,7 @@ figure {
 
 @media (min-width: 1200px) {
   .hero__title {
-    font-size: 6rem;
+    font-size: 4rem;
   }
 }
 

@@ -20,8 +20,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    
-    
 });
 
 // // Code for the canvas animations
@@ -100,7 +98,7 @@ const slides = document.querySelectorAll('.slides img');
 
     // Titles and Descriptions for each slide
     const titles = [
-      "Zoey", "Siddhraj Z2", "Siddhraj Z+", "Siddhraj Zavod", "Zold", "Siddhraj Zori", "Greens"
+      "Siddhraj Zoey", "Siddhraj Z²", "Siddhraj Z+", "Siddhraj Zavod", "Siddhraj Zold", "Siddhraj Zori", "Siddhraj Greens"
     ];
 
     const descriptions = [

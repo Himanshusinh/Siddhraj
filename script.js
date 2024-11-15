@@ -113,7 +113,7 @@ const slides = document.querySelectorAll('.slides img');
 
     // Links for "More Info" buttons
     const moreInfoLinks = [
-      "sub-pages/zoey/index.html", "second-page/index.html", "sub-pages/z+/index.html", "sub-pages/zavod/index.html", "sub-pages/zold/index.html", "sub-pages/zori/index.html", "page7.html"
+      "/sub-pages/zoey/index.html", "second-page/index.html", "sub-pages/z+/index.html", "sub-pages/zavod/index.html", "sub-pages/zold/index.html", "sub-pages/zori/index.html", "page7.html"
     ];
 
     let currentIndex = 0;

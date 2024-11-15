@@ -164,32 +164,23 @@ canvas {
   height: auto;
 }
 
-.sid{
-  position: absolute;
-  top: -5%;
-  left: 5%;
-  width: 50%;
-  height: auto;
-  font-size: 100px;
-  color: white;
-  text-shadow: 2px 3px 10px rgba(0, 0, 0, 0.2);
-}
+
 
 .Background{
   position: relative;
 
   img{
     z-index: -1;
- 
   }
 
   h1 {
     position: absolute;
     top: -50px;
-    font-size: 40px;
+    font-size: 45px;
     color: #5c5c5c;
     margin: 150px 0;
-    font-family: "Archivo Black", sans-serif;
+    font-family: "Lato", sans-serif;
+    font-weight: 1000;
     letter-spacing: 8px;
     text-shadow: none;
   }
@@ -198,27 +189,6 @@ canvas {
     object-fit: cover;
     width: 100vw;
     height: 238px;
-  }
-
-  .collab{
-    display:  flex;
-    position: absolute;
-    top: -1px;
-    z-index: 1;
-    margin: 250px 0px 0px 250px;
-    
-
-    img{
-      margin: 70px 0px 0px 30px;
-    }
-
-    span{
-      margin-top: 45%;
-      font-size: 18px;
-      font-weight: 700;
-      font-family: "Lato", sans-serif;
-    }
-
   }
   
 }
@@ -229,8 +199,8 @@ canvas {
   min-width: 100vw;
   display: flex;
   flex-direction: column;
-  background-image: url('https://firebasestorage.googleapis.com/v0/b/siddhraj-fd6ac.appspot.com/o/mainpage%2Fsliderimages%2Fbg1.svg?alt=media&token=712ec882-59b9-49ce-aeff-8d14ac7a926f');
-  margin-top: -1%;
+  /* background-image: url('https://firebasestorage.googleapis.com/v0/b/siddhraj-fd6ac.appspot.com/o/mainpage%2Fsliderimages%2Fbg1.svg?alt=media&token=712ec882-59b9-49ce-aeff-8d14ac7a926f'); */
+  margin-top: 1%;
   .first-section {
     img{
       width: 80vw;
@@ -255,18 +225,18 @@ canvas {
     object-fit: cover;
     animation: appear 5s ease-in forwards;
     animation-timeline: view();
-    animation-range: entry 70% cover 50%;
+    animation-range: entry 30% cover 50%;
     z-index: 5;
   }
   .first-image, .third-image {
     position: absolute;
-    bottom: 30%;
+    bottom: 50%;
   }
   .first-image {
     left: 0;
     animation: firstimage 2s ease-in forwards;
     animation-timeline: view();
-    animation-range: entry 90% cover 40%;
+    animation-range: entry 100% cover 40%;
     height: 20vh;
     width: 20vw;
   }
@@ -274,7 +244,7 @@ canvas {
     right: 0;
     animation: thirdimage 2s ease-in forwards;
     animation-timeline: view();
-    animation-range: entry 90% cover 40%;
+    animation-range: entry 100% cover 40%;
     height: 20vh;
     width: 20vw;
   }
@@ -286,11 +256,11 @@ canvas {
 @keyframes appear {
   from{
     width: 60vw;
-    height: auto;
+    height: 60vh;
   }
   to{
     width: 100vw;
-    height: auto;
+    height: 100vh;
   }
 }
 
@@ -320,7 +290,7 @@ canvas {
       width:35vw;
 
       margin-left: -30%;
-      opacity: 0.7;
+      opacity: 0.8;
      
     }
   }
@@ -332,17 +302,13 @@ canvas {
       opacity: 1;
     }
     to{
-      height: 30vh;
+      height: 35vh;
       width: 30vw;
       margin-right: -25%;
-      opacity: 0.7;
+      opacity: 0.8;
     }
   }
 
-/* Keyframes for Desktop (min-width: 1024px) */
-@media (min-width: 1024px) {
-
-}
 
 /* Keyframes for Tablet (min-width: 768px and max-width: 1023px) */
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -769,13 +735,13 @@ font-size: 1.2rem;
 text-decoration: none;
 text-align: center;
 transition: background-color 0.3s;
-z-index: 1; /* Ensure it's visible above images */
+z-index: 3; /* Ensure it's visible above images */
 }
 
 
-.more-info-btn:hover {
+/* .more-info-btn:hover {
  
-}
+} */
 
 /* Dots for manual control */
 .dots {
@@ -1237,7 +1203,7 @@ figure {
   z-index: 1;
 
   a{
-  text-decoration: no;
+  text-decoration: none;
   }
 }
 

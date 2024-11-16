@@ -938,6 +938,40 @@ footer {
 
 @media (min-width: 768px) and (max-width: 1024px){
 
+  .text{
+    text-align: center;
+    font-size: 35px;
+  }
+  .location {
+    & .image {
+        iframe {
+            width: 90vw;
+            height: 52vh;
+        }
+    }
+}
+
+  .middle-imagex{
+    height: 60vh !important;
+  }
+
+  .title_wrapper h1{
+    font-size: 45px;
+  }
+
+  .hamburger{
+    height: 40px;
+    width: 44px;
+    margin-top: 15%;
+  }
+
+  .menu-wrapper {
+    margin-top: 1%;
+    
+    right: 4%;
+    position: relative;
+}
+
   .boxslider9{
     .boxslider-images9{
       img{
@@ -989,7 +1023,7 @@ footer {
       & .tilted-text {
           h1 {
             rotate: none;
-            padding: 10% 20%;
+            padding: 6% 14%;
             text-align: center;
 
           }
@@ -1003,7 +1037,8 @@ footer {
           & .flex-col {
               & .content-text {
                   p {
-                      padding: 10%;
+                      padding:0 13%;
+                      text-align: center;
                   }
               }
           }

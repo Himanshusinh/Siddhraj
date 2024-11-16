@@ -199,7 +199,7 @@ canvas {
   min-width: 100vw;
   display: flex;
   flex-direction: column;
-  /* background-image: url('https://firebasestorage.googleapis.com/v0/b/siddhraj-fd6ac.appspot.com/o/mainpage%2Fsliderimages%2Fbg1.svg?alt=media&token=712ec882-59b9-49ce-aeff-8d14ac7a926f'); */
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/siddhraj-fd6ac.appspot.com/o/mainpage%2Fsliderimages%2Fbg1.svg?alt=media&token=712ec882-59b9-49ce-aeff-8d14ac7a926f');
   margin-top: 1%;
   .first-section {
     img{
@@ -416,40 +416,81 @@ canvas {
 }
 
 /* Media Queries for Responsive Layout */
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
   .second-image {
       width: 70vw;
   }
   .first-image, .third-image {
-      width: 20vw; /* Increase width for smaller screens */
+      width: 20vw; 
   }
 }
 
 @media (max-width: 768px) {
   .second-image {
-      width: 80vw; /* Make the central image larger on small screens */
+      width: 80vw; 
   }
   .first-image, .third-image {
-      width: 25vw; /* Larger images on mobile */
+      width: 25vw; 
   }
 }
 
 @media (max-width: 480px) {
   .middle-section {
-      flex-direction: column; /* Stack images vertically on very small screens */
+      flex-direction: column; 
   }
   .second-image {
-      width: 90vw; /* Max out the width for the main image */
+      width: 90vw;
   }
   .first-image, .third-image {
-      width: 40vw; /* Make side images larger */
+      width: 40vw; 
   }
   .end-section img {
-      width: 90vw; /* Adjust bottom image for mobile */
+      width: 90vw; 
+  }
+}
+ */
+
+ @media (max-width: 1024px) {
+
+  
+  .first-section img,
+  .middle-section .first-image,
+  .middle-section .second-image,
+  .middle-section .third-image {
+    animation: none !important;
+  }
+
+  .middle-section {
+    position: static !important; /* Remove relative positioning */
+  }
+  .second-image {
+    width: 89vw !important; /* Set width to 89% of the viewport width */
+    height: 38vh !important; /* Set height to 38% of the viewport height */
   }
 }
 
+/* Media Queries for Mobile (max-width: 767px) */
+@media (max-width: 767px) {
+  .middle-section {
+    flex-direction: column; /* Stack images vertically */
+  }
+  .second-image {
+    width: 90vw; /* Max out the width */
+  }
+  .first-image, .third-image {
+    width: 40vw; /* Larger side images */
+  }
+  .end-section img {
+    width: 90vw; /* Adjust bottom image */
+  }
+}
 
+@media (min-width: 768px) and (max-width: 1024px){
+  .second-image, .third-image{
+    margin: 99px 0;
+
+  }
+}
 
 
 /* homepage-sec4 */
@@ -860,6 +901,9 @@ z-index: 3; /* Ensure it's visible above images */
 }
 
 @media (max-width: 768px) {
+
+  
+
   .buttons{
     gap: 50%;
   }

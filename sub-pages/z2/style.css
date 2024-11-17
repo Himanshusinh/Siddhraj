@@ -136,22 +136,33 @@
 
 @media (max-width:767px){
   .header img {
-      height: 30px;
+      height: 35px;
+      width: 200px;
+      margin-left: 0;
   }
   
   .header{
       justify-content: flex-start;
-      gap: 50%;
+      gap: 70%;
   }
 
   .hamburger{
-      height: 20px;
+      height: 17px;
       width: 25px;
       margin-top: 5px;
     }
   
     .hamburger span{
-      height: 3px;
+      height: 2px;
+    }
+    #nav-links a{
+      font-size: 18px;
+      margin-top: -5px;
+    }
+    #nav-links{
+       margin-top: -10px;
+      margin-right: -5px; 
+      justify-items: end;
     }
 }
 
@@ -661,6 +672,7 @@
   
     .footer-left, .footer-nav, .footer-newsletter, .footer-social {
         margin-bottom: 20px;
+        text-align: center;
     }
   
     .footer-newsletter form {
@@ -670,6 +682,19 @@
     .footer-newsletter input, .footer-newsletter button {
         width: 100%;
         margin: 5px 0;
+    }
+    .footer-bottom{
+      margin-bottom: -20px;
+    }
+  
+    .footer-newsletter{
+      input{
+        width: 70vw;
+        border-radius: 8px;
+      }
+      button{
+        border-radius: 8px;
+      }
     }
   }
   
@@ -700,9 +725,10 @@
                   position: absolute;
                   z-index: 1;
                   top: 46%;
-                  left: 26%;
+                  left: 20%;
                   font-size: 40px;
-                  font-weight: 200;
+                  font-weight: 500;
+                  letter-spacing: 0.1cm;
                   font-family: "Lato", sans-serif;
                   text-shadow: 2px 2px 8px #333;
               }

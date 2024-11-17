@@ -139,11 +139,12 @@ a{
 @media (max-width:767px){
   .header img {
       height: 30px;
+      margin-left: 0;
   }
   
   .header{
       justify-content: flex-start;
-      gap: 50%;
+      gap: 66%;
   }
 
   .hamburger{
@@ -155,12 +156,29 @@ a{
     .hamburger span{
       height: 3px;
     }
+    #nav-links a{
+      font-size: large;
+      margin-top: -5px;
+    }
+    #nav-links{
+      margin-top: -10px;
+      margin-right: -5px;
+      justify-items: end;
+    }
+  
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(-42deg);
+    }
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(42deg);
+    }
+    
+    .footer-nav ul {
+      list-style: none;
+      padding: 0;
+      margin-top: -80px;
+    }
 }
-
-
-
-
-
 
 
 
@@ -440,6 +458,8 @@ header {
   /* Responsive design */
   @media (max-width: 768px) {
 
+    
+
     .logo{
         position: fixed;
         left: 20%;
@@ -675,6 +695,7 @@ header {
 
     .footer-left, .footer-nav, .footer-newsletter, .footer-social {
         margin-bottom: 20px;
+        text-align: center;
     }
 
     .footer-newsletter form {
@@ -684,6 +705,24 @@ header {
     .footer-newsletter input, .footer-newsletter button {
         width: 100%;
         margin: 5px 0;
+    }
+    .footer-bottom{
+      margin-bottom: -20px;
+    }
+  
+    .footer-newsletter{
+      input{
+        width: 70vw;
+        border-radius: 8px;
+      }
+      button{
+        border-radius: 8px;
+      }
+    }
+    .footer-nav ul {
+      list-style: none;
+      padding: 0;
+      margin-top: -80px;
     }
 }
 

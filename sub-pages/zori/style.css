@@ -824,7 +824,7 @@ footer {
                   p {
                       padding: 10%;
                       margin-top: -58px;
-                      margin-bottom: -100px;
+                      margin-bottom: -40px;
                   }
               }
           }
@@ -1071,4 +1071,10 @@ footer {
 display: flex;
 justify-content: center;
 padding: 1%;
+}
+
+@media (max-width : 767px) {
+  .download-button{
+    margin-top: 8%;
+  }
 }

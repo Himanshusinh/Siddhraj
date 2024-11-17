@@ -972,6 +972,12 @@ header {
     text-align: center;
   }
 
+  .section{
+    .texts{
+      margin-top: 200px;
+    }
+  }
+
   .section {
     .images {
         display: flex;
@@ -979,15 +985,13 @@ header {
         height: 100vh;
         gap: 70px;
         flex-direction: column;
+        margin-top: -200px;
     }
 }
 .design{
   visibility: hidden;
 }
-.slideimage{
-  padding-top: -100px;
-  z-index: 3;
-}
+
 
 
 
@@ -1005,7 +1009,6 @@ header {
 
 .section {
   & .texts {
-
       h1 {
           text-align: center;
           display: flex;
@@ -1026,11 +1029,11 @@ header {
   & .texts {
       p {
         font-family: "Lato", sans-serif;
-          font-size: 12px;
-          font-weight: 300;
-          padding: 20px 40px;
+        font-size: 12px;
+        font-weight: 300;
+        padding: 20px 40px;
           /* margin: 20% 0 2% 30%; */
-          word-spacing: 1cap;
+        word-spacing: 1cap;
       }
   }
 }

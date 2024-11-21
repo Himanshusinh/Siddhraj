@@ -296,6 +296,15 @@ top: 100vh;
 .container_image .title_wrapper h1 {
 color: white;
 }
+@media (max-width : 767px){
+  .container_solid .title_wrapper h1{
+    background-size: auto 100vh;
+  }
+  .container_image{
+    background-size: auto 100vh;
+  }
+
+}
 
 .first-section{
     background-image: url('../graphics/bg1.svg') ;

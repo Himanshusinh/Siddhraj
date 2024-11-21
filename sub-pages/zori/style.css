@@ -834,15 +834,21 @@ footer {
                   p {
                       padding: 10%;
                       margin-top: -58px;
-                      margin-bottom: -40px;
+                      margin-bottom: -20px;
+                  }
+                  .a-tag{
+                    text-decoration: none;
+                    word-wrap: break-word;
+                    color: #1f1f1f;
+                    padding: 10%;
+                    margin-top: 1px;
+                    font-family: "Lato", sans-serif;
+                    font-weight: 400;
+                    font-size: 19px;
                   }
               }
           }
       }
-  }
-
-  .a-tag{
-    visibility: hidden;
   }
 
   .location {

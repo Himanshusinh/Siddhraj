@@ -809,14 +809,21 @@
                         padding: 10%;
                         margin-top: -17%;
                     }
+                    .a-tag{
+                      text-decoration: none;
+                      word-wrap: break-word;
+                      color: #1f1f1f;
+                      padding: 10%;
+                      margin-top: 1px;
+                      font-family: "Lato", sans-serif;
+                      font-weight: 400;
+                      font-size: 19px;
+                    }
                 }
             }
         }
     }
   
-    .a-tag{
-      visibility: hidden;
-    }
     .location h1{
       margin-top: 30px;
       font-size: 20px;
@@ -1009,4 +1016,10 @@
   display: flex;
   justify-content: center;
   padding: 3%;
+}
+
+@media (max-width : 767px){
+  .download-button{
+    margin-top: 10%;
+  }
 }

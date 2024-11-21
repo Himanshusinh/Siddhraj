@@ -834,16 +834,22 @@ footer {
                   p {
                       padding: 10%;
                       margin-top: -58px;
-                      margin-bottom: -100px;
+                  }
+                  .a-tag{
+                    text-decoration: none;
+                    word-wrap: break-word;
+                    color: #1f1f1f;
+                    padding: 10%;
+                    margin-top: 1px;
+                    font-family: "Lato", sans-serif;
+                    font-weight: 400;
+                    font-size: 19px;
                   }
               }
           }
       }
   }
 
-  .a-tag{
-    visibility: hidden;
-  }
 
   .location {
     & .image {
@@ -1061,6 +1067,7 @@ footer {
 
 .download-button {
   padding: 12px 24px;
+  margin-top: 3%;
   background-color: #ffffff; /* Green color */
   color: rgb(7, 7, 7);
   font-size: 16px;
@@ -1081,4 +1088,10 @@ footer {
 display: flex;
 justify-content: center;
 padding: 1%;
+}
+
+@media (max-width : 767px){
+  .download-button{
+    margin-top: 10%;
+  }
 }

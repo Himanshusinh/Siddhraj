@@ -62,6 +62,188 @@ body {
 [tabindex="-1"]:focus {
   outline: 0 !important; }
 
+
+  header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  header img {
+    height: 75px;
+    margin-left: 30px;
+  }
+  
+  /* Wrapper styling */
+  .menu-wrapper {
+    position: relative;
+  }
+  
+  /* Hamburger menu styling */
+  .hamburger {
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease;
+  }
+  
+  .hamburger span {
+    background-color: #fff;
+    width: 100%;
+    height: 3px;
+    transition: 0.3s ease;
+    position: relative;
+  }
+  
+  .hamburger span:nth-child(1) {
+    transform-origin: top left;
+  }
+  
+  .hamburger span:nth-child(3) {
+    transform-origin: bottom left;
+  }
+  
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(37deg);
+  }
+  
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-37deg);
+  }
+  
+  /* Sliding background */
+  .nav-background {
+    position: absolute;
+    top: 60px; /* Adjust based on header height */
+    right: 0;
+    width: 0;
+     height: calc(100vh - 60px); /* Full height minus header */
+    background-color: #fff;
+    z-index: 5; /* Ensure it's above the canvas but below the nav links */
+    transition: width 0.4s ease;
+  }
+  
+  
+  /* Hidden nav links */
+  #nav-links {
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    top: 40px; /* Adjust based on header height */
+    right: 0;
+    opacity: 0;
+    z-index: 10; /* Above the background */
+    display: none;
+    transition: all 0.3s ease;
+  
+  }
+  
+  #nav-links.open {
+    display: block;
+    opacity: 1;
+  }
+  
+  #nav-links li {
+    padding: 5px 15px;
+  }
+  
+  #nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    font-size: x-large;
+  }
+  
+  #nav-links a:hover {
+    color: #d0d0d0;
+  }
+  
+  /* Animation for sliding in the nav items */
+  #nav-links.open li {
+    opacity: 0;
+    transform: translateX(100px);
+    animation: slideIn 0.4s ease forwards;
+  }
+  
+  @keyframes slideIn {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+
+
+
+  @media (max-width: 767px) {
+    header img {
+      height: 30px;
+      margin-left: 0;
+    }
+  
+    header{
+      justify-content: flex-start;
+      gap: 66%;
+    }
+    .h1{
+      font-size: 2rem;
+    }
+  
+    .h2{
+      font-size: 1rem;
+    }
+  
+    .hamburger{
+      height: 20px;
+      width: 25px;
+      margin-top: 5px;
+  
+    }
+  
+    #nav-links a{
+      font-size: large;
+      margin-top: -5px;
+    }
+    #nav-links{
+      margin-top: -10px;
+      margin-right: -5px;
+      justify-items: end;
+    }
+  
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(-45deg);
+    }
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(45deg);
+    }
+  
+  
+    .hamburger span{
+      height: 3px;
+    }
+  }
+
+
+
+
+
+
+
 hr {
   -webkit-box-sizing: content-box;
   box-sizing: content-box;

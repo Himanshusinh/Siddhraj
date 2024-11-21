@@ -506,7 +506,7 @@
   
   /* footer  */
   footer {
-    background: linear-gradient(to bottom,#D9D9D9,#D9D9D9 ); /* Light to darker gradient */
+    background: linear-gradient(to bottom,#ffffff,#b4b4b4 ); /* Light to darker gradient */
     padding: 80px 0;
     font-family: "Lato", sans-serif;
   }

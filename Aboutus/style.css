@@ -808,22 +808,19 @@ header {
   }
 
   .mission{
-      
       display: flex;
       margin-top: -2%;
       .flex-col{
           display: flex;
           flex-direction: column;
-          margin: 10% 0 0 10%;
-
+          margin: 10% 0 0 1%;
           h1{
               font-size: 80px;
               font-family: "Lato", sans-serif;
               font-weight: 300;
           }
           p{
-              margin: -5% 0 0 -30%;
-              
+              margin: -5% 0% 0 0;
           }
       }
 

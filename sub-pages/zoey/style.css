@@ -267,8 +267,8 @@ letter-spacing: 0.3cap;
 }
 
 .container_solid .title_wrapper h1 {
-  background-image: url('https://firebasestorage.googleapis.com/v0/b/siddhraj-fd6ac.appspot.com/o/siddhraj%20all%20photos%2FmainImages%2Fout-Copy%20of%20zoey%2001.jpg?alt=media&token=b3f044a8-4995-448b-b86e-a97035cd334d');
-background-size: auto 100vh;
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/siddhraj-fd6ac.appspot.com/o/siddhraj%20all%20photos%2FmainImages%2Fout-Copy%20of%20zoey%2001%20(1).jpg?alt=media&token=0f66b073-15b0-49d9-9c59-99a198705a97');
+background-size: 100vw 100vh;
 object-fit: cover;
 background-position: center;
 
@@ -283,8 +283,8 @@ color: black;
 
 .container_image {
 /* Grab a free image from unsplash */
-background-image: url('https://firebasestorage.googleapis.com/v0/b/siddhraj-fd6ac.appspot.com/o/siddhraj%20all%20photos%2FmainImages%2Fout-Copy%20of%20zoey%2001.jpg?alt=media&token=b3f044a8-4995-448b-b86e-a97035cd334d');
-background-size:auto 100vh;
+background-image: url('https://firebasestorage.googleapis.com/v0/b/siddhraj-fd6ac.appspot.com/o/siddhraj%20all%20photos%2FmainImages%2Fout-Copy%20of%20zoey%2001%20(1).jpg?alt=media&token=0f66b073-15b0-49d9-9c59-99a198705a97');
+background-size:100vw 100vh;
 object-fit: cover;
 background-position: center;
 background-attachment: fixed;

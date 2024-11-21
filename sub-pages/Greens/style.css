@@ -267,8 +267,8 @@ letter-spacing: 0.3cap;
 }
 
 .container_solid .title_wrapper h1 {
-  background: url('https://firebasestorage.googleapis.com/v0/b/siddhraj-fd6ac.appspot.com/o/siddhraj%20all%20photos%2FmainImages%2Fout-Copy%20of%20zori%2006.JPG?alt=media&token=93786f79-5261-4413-97e1-14c29d49cdd4');
-background-size: auto 100vh;
+  background: url('https://firebasestorage.googleapis.com/v0/b/siddhraj-fd6ac.appspot.com/o/siddhraj%20all%20photos%2Fgreen%2F4%20(2).JPG?alt=media&token=bc0ea494-ce2d-4a73-a4ab-e8999d77bffa');
+background-size: 100vw 100vh;
 object-fit: cover;
 background-position: center;
 
@@ -283,8 +283,8 @@ color: black;
 
 .container_image {
 /* Grab a free image from unsplash */
-background: url('https://firebasestorage.googleapis.com/v0/b/siddhraj-fd6ac.appspot.com/o/siddhraj%20all%20photos%2FmainImages%2Fout-Copy%20of%20zori%2006.JPG?alt=media&token=93786f79-5261-4413-97e1-14c29d49cdd4');
-background-size:auto 100vh;
+background: url('https://firebasestorage.googleapis.com/v0/b/siddhraj-fd6ac.appspot.com/o/siddhraj%20all%20photos%2Fgreen%2F4%20(2).JPG?alt=media&token=bc0ea494-ce2d-4a73-a4ab-e8999d77bffa');
+background-size:100vw 100vh;
 object-fit: cover;
 background-position: center;
 background-attachment: fixed;

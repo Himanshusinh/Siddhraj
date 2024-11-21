@@ -138,13 +138,13 @@ a{
 
 @media (max-width:767px){
   .header img {
-      height: 30px;
+      height: 40px;
       margin-left: 0;
   }
   
   .header{
       justify-content: flex-start;
-      gap: 66%;
+      gap: 57%;
   }
 
   .hamburger{
@@ -167,10 +167,10 @@ a{
     }
   
     .hamburger.active span:nth-child(3) {
-      transform: rotate(-42deg);
+      transform: rotate(-45deg);
     }
     .hamburger.active span:nth-child(1) {
-      transform: rotate(42deg);
+      transform: rotate(45deg);
     }
     
     .footer-nav ul {

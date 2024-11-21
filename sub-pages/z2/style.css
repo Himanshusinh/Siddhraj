@@ -57,7 +57,7 @@
 }
 
 .hamburger.active span:nth-child(1) {
-  transform: rotate(35deg);
+  transform: rotate(36deg);
 }
 
 .hamburger.active span:nth-child(2) {
@@ -65,7 +65,7 @@
 }
 
 .hamburger.active span:nth-child(3) {
-  transform: rotate(-35deg);
+  transform: rotate(-36deg);
 }
 
 /* Sliding background */
@@ -136,14 +136,13 @@
 
 @media (max-width:767px){
   .header img {
-      height: 35px;
-      width: 200px;
+      height: 40px;
       margin-left: 0;
   }
   
   .header{
       justify-content: flex-start;
-      gap: 70%;
+      gap: 57%;
   }
 
   .hamburger{
@@ -163,6 +162,12 @@
        margin-top: -10px;
       margin-right: -5px; 
       justify-items: end;
+    }
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(39deg);
+    }
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(-39deg);
     }
 }
 

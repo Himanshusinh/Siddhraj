@@ -1037,13 +1037,13 @@ z-index: 3; /* Ensure it's visible above images */
 @media (max-width: 767px) {
 
   header img {
-    height: 30px;
+    height: 40px;
     margin-left: 0;
   }
 
   header{
     justify-content: flex-start;
-    gap: 66%;
+    gap: 57%;
   }
   .h1{
     font-size: 2rem;

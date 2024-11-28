@@ -422,14 +422,16 @@ header {
     padding: 10px 20px;
     font-size: 1rem;
     font-weight: bold;
-    background-color: #fff;
-    color: #000;
+    background-color: transparent;
+    color: white;
     border: none;
     border-radius: 20px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
   }
+
+  
   
   .project_button:hover {
     background-color: #000;

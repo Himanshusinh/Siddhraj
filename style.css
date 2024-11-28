@@ -45,10 +45,10 @@ header img {
 /* Hamburger menu styling */
 .hamburger {
   width: 30px;
-  height: 20px;
+  height: 25px;
   cursor: pointer;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-direction: column;
   align-items: center;
   transition: all 0.3s ease;
@@ -57,7 +57,7 @@ header img {
 .hamburger span {
   background-color: #fff;
   width: 100%;
-  height: 3px;
+  height: 1px;
   transition: 0.3s ease;
   position: relative;
 }
@@ -180,7 +180,7 @@ canvas {
     color: #5c5c5c;
     margin: 150px 0;
     font-family: "Lato", sans-serif;
-    font-weight: 1000;
+    font-weight: 300;
     letter-spacing: 8px;
     text-shadow: none;
   }
@@ -776,7 +776,7 @@ h2 {
 /* More Info Button for each slide */
 .more-info-btn {
 position: absolute;
-bottom: 47%;
+bottom: 7%;
 left: 50%;
 transform: translateX(-50%);
 padding: 10px 20px;
@@ -1058,6 +1058,7 @@ z-index: 3; /* Ensure it's visible above images */
     top: 30%;
     margin: -24px 0;
     letter-spacing: 5px;
+    
 }
 
   .Background {
@@ -1216,6 +1217,7 @@ figure {
 }
 
 .hero__title {
+  font-weight: 300;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1274,3 +1276,13 @@ figure {
     top: 43%;
     color: white;
 }
+
+#slide-title{
+  visibility: hidden;
+}
+
+#slide-description{
+  font-weight: 300;
+  top: 80%;
+}
+

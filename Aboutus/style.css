@@ -134,12 +134,13 @@
 
 @media (max-width:767px){
   .header img {
-      height: 30px;
+      height: 40px;
+      margin: 0;
   }
   
   .header{
       justify-content: flex-start;
-      gap: 50%;
+      gap: 57%;
   }
 
   .hamburger{
@@ -150,6 +151,29 @@
   
     .hamburger span{
       height: 3px;
+    }
+
+    #nav-links a{
+      font-size: large;
+      margin-top: -5px;
+    }
+    #nav-links{
+      margin-top: -10px;
+      margin-right: -5px;
+      justify-items: end;
+    }
+  
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(-42deg);
+    }
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(42deg);
+    }
+    
+    .footer-nav ul {
+      list-style: none;
+      padding: 0;
+      margin-top: -80px;
     }
 }
 
@@ -670,6 +694,19 @@ header {
         width: 100%;
         margin: 5px 0;
     }
+    .footer-bottom{
+      margin-bottom: -20px;
+    }
+  
+    .footer-newsletter{
+      input{
+        width: 70vw;
+        border-radius: 8px;
+      }
+      button{
+        border-radius: 8px;
+      }
+    }
 }
 
 /* Fine-tuning the spacing */
@@ -771,22 +808,19 @@ header {
   }
 
   .mission{
-      
       display: flex;
       margin-top: -2%;
       .flex-col{
           display: flex;
           flex-direction: column;
-          margin: 10% 0 0 10%;
-
+          margin: 10% 0 0 1%;
           h1{
               font-size: 80px;
               font-family: "Lato", sans-serif;
               font-weight: 300;
           }
           p{
-              margin: -5% 0 0 -30%;
-              
+              margin: -5% 0% 0 0;
           }
       }
 
@@ -935,6 +969,12 @@ header {
     text-align: center;
   }
 
+  .section{
+    .texts{
+      margin-top: 200px;
+    }
+  }
+
   .section {
     .images {
         display: flex;
@@ -942,11 +982,14 @@ header {
         height: 100vh;
         gap: 70px;
         flex-direction: column;
+        margin-top: -200px;
     }
 }
 .design{
   visibility: hidden;
 }
+
+
 
 
 .section {
@@ -970,7 +1013,11 @@ header {
           font-size: 43px;
           font-weight: 200;
           letter-spacing: 0.4ch;
+          
           /* margin: 4% 0 0 0; */
+          a{
+            margin-left: -50px;
+          }
       }
   }
 }
@@ -979,11 +1026,11 @@ header {
   & .texts {
       p {
         font-family: "Lato", sans-serif;
-          font-size: 12px;
-          font-weight: 300;
-          padding: 100px 40px;
+        font-size: 12px;
+        font-weight: 300;
+        padding: 20px 40px;
           /* margin: 20% 0 2% 30%; */
-          word-spacing: 1cap;
+        word-spacing: 1cap;
       }
   }
 }
@@ -1423,7 +1470,6 @@ header {
   & .vision {
       & .flex-col {
           p {
-
             margin: 0;
           }
       }
@@ -1457,14 +1503,35 @@ header {
 }
 
 
+}
 
 
 
+@media  (max-width:767px){
+  .page-4{
+    .mission{
+      
+      .texts{
+        font-size: 17px;
+        word-spacing: 0.2cm;
+      }
+    }
+    .vision{
+      .texts{
+        font-size: 17px;
+        word-spacing: 0.2cm;
+      }
+    }
+  }
 
 
-
-
-
+  .page-5{
+    .texts{
+      font-size: 17px;
+      word-spacing: 0.2cm;
+      /* margin: 0 7% 0 7%; */
+    }
+  }
 
 }
 

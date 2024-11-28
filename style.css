@@ -175,7 +175,7 @@ canvas {
 
   h1 {
     position: absolute;
-    top: -50px;
+    top: -80px;
     font-size: 45px;
     color: #5c5c5c;
     margin: 150px 0;
@@ -677,6 +677,7 @@ footer {
 
   .footer-left, .footer-nav, .footer-newsletter, .footer-social {
       margin-bottom: 20px;
+      text-align: center;
   }
 
   .footer-newsletter form {
@@ -686,6 +687,19 @@ footer {
   .footer-newsletter input, .footer-newsletter button {
       width: 100%;
       margin: 5px 0;
+  }
+  .footer-bottom{
+    margin-bottom: -20px;
+  }
+
+  .footer-newsletter{
+    input{
+      width: 70vw;
+      border-radius: 8px;
+    }
+    button{
+      border-radius: 8px;
+    }
   }
 }
 
@@ -1023,12 +1037,13 @@ z-index: 3; /* Ensure it's visible above images */
 @media (max-width: 767px) {
 
   header img {
-    height: 30px;
+    height: 40px;
+    margin-left: 0;
   }
 
   header{
     justify-content: flex-start;
-    gap: 50%;
+    gap: 57%;
   }
   .h1{
     font-size: 2rem;
@@ -1042,7 +1057,26 @@ z-index: 3; /* Ensure it's visible above images */
     height: 20px;
     width: 25px;
     margin-top: 5px;
+
   }
+
+  #nav-links a{
+    font-size: large;
+    margin-top: -5px;
+  }
+  #nav-links{
+    margin-top: -10px;
+    margin-right: -5px;
+    justify-items: end;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg);
+  }
+
 
   .hamburger span{
     height: 3px;

@@ -103,7 +103,7 @@ const slides = document.querySelectorAll('.slides img');
 
     const descriptions = [
       "Contemporary Comfort with Integrated Green Living", 
-  "Elevating Workspaces with Luxurious Amenities and Green Spaces", 
+  "Elevating Workspaces, Redefining Green Spaces.", 
   "A Fusion of Tradition and Modernity for Secure Living", 
   "Innovative Business Park for Dynamic Work Environments", 
   "Luxury Living in a Harmonious Blend of Nature and Sophistication", 
@@ -113,7 +113,7 @@ const slides = document.querySelectorAll('.slides img');
 
     // Links for "More Info" buttons
     const moreInfoLinks = [
-      "/sub-pages/zoey/index.html", "second-page/index.html", "sub-pages/z+/index.html", "sub-pages/zavod/index.html", "sub-pages/zold/index.html", "sub-pages/zori/index.html", "page7.html"
+      "/sub-pages/zoey/index.html", "sub-pages/z2/index.html", "sub-pages/z+/index.html", "sub-pages/zavod/index.html", "sub-pages/zold/index.html", "sub-pages/zori/index.html", "sub-pages/Greens/index.html"
     ];
 
     let currentIndex = 0;

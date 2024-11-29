@@ -31,6 +31,93 @@ function downloadPDF() {
 }
 
 
+const scriptURL = 'https://script.google.com/macros/s/AKfycbxDfxJAYl5ch5I2fiO8wZqgJeT2c2gESoE8EH86Nuhpv--qmBKW2s-XZDeeCIT-mYDI/exec'; // Replace with your Google Apps Script URL
+      const openFormBtn = document.getElementById('openFormBtn');
+      const closeFormBtn = document.getElementById('closeFormBtn');
+      const closeSuccessBtn = document.getElementById('closeSuccessBtn');
+      const popupOverlay = document.getElementById('popupOverlay');
+      const successOverlay = document.getElementById('successOverlay');
+      const popupForm = document.getElementById('popupForm');
+      const spinner = document.getElementById('spinner');
+  
+      // Open Popup Form
+      openFormBtn.addEventListener('click', () => {
+        popupOverlay.style.display = 'flex';
+      });
+  
+      // Close Popup Form
+      closeFormBtn.addEventListener('click', () => {
+        popupOverlay.style.display = 'none';
+      });
+  
+      // Close Success Popup and Redirect to Google Drive PDF
+      closeSuccessBtn.addEventListener('click', () => {
+        const pdfLink = "https://drive.google.com/file/d/1rl20ey6XhVYILN-8-hOdpfBb6xIdts4_/view?usp=sharing"; // Replace with your actual Google Drive PDF link
+        window.location.href = pdfLink; // Redirect user to the PDF download page
+      });
+  
+      // Form Submission
+      popupForm.addEventListener('submit', (e) => {
+        e.preventDefault(); // Prevent default form submission
+  
+        // Prepare Form Data
+        const name = popupForm.querySelector('input[name="name"]').value;
+        const email = popupForm.querySelector('input[name="email"]').value;
+        const phone = popupForm.querySelector('input[name="phone"]').value;
+        const query = popupForm.querySelector('textarea[name="query"]').value;
+        const date = new Date().toLocaleDateString();
+  
+        // Validate Name (should not be a single letter)
+        if (name.length <= 1) {
+          alert('Name should have more than one letter.');
+          return;
+        }
+  
+        // Validate Mobile Number (should be 10 digits or start with +91 or 0)
+        const phonePattern = /^(?:\+91|0)?\d{10}$/;
+        if (!phonePattern.test(phone)) {
+          alert('Please enter a valid mobile number (10 digits, or starting with +91 or 0).');
+          return;
+        }
+  
+        // Validate Email
+        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (!emailPattern.test(email)) {
+          alert('Please enter a valid email address.');
+          return;
+        }
+  
+        // Validate Query (should not be a single letter)
+        if (query.length <= 1) {
+          alert('Query should have more than one letter.');
+          return;
+        }
+  
+        // Prepare Form Data
+        const formData = new FormData();
+        formData.append('name', name);
+        formData.append('email', email);
+        formData.append('phone', phone);
+        formData.append('Date', date);
+        formData.append('query', query);
+  
+        // Show Spinner
+        spinner.style.display = 'block';
+  
+        fetch(scriptURL, { method: 'POST', body: formData })
+          .then(response => {
+            spinner.style.display = 'none'; // Hide spinner
+            popupOverlay.style.display = 'none'; // Close form popup
+            successOverlay.style.display = 'flex'; // Show success message
+            popupForm.reset(); // Reset form
+          })
+          .catch(error => {
+            spinner.style.display = 'none'; // Hide spinner
+            console.error('Error!', error.message);
+          });
+      });
+
+
 
 
 

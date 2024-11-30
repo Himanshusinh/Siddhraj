@@ -88,6 +88,7 @@ prevButton9.addEventListener('click', prevSlide9);
 
 // Initialize first slide
 showSlide9(currentIndex9);
+<<<<<<< HEAD
 
 
 
@@ -197,3 +198,7 @@ popupForm.addEventListener('submit', (e) => {
     });
 });
 
+=======
+document.querySelector('.next9').addEventListener('click', nextSlide9);
+document.querySelector('.prev9').addEventListener('click', prevSlide9);
+>>>>>>> 367c8a74fdff5ee963ef0f774c15f45b16e32f3d

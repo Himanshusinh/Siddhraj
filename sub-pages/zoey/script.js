@@ -94,3 +94,7 @@ prevButton9.addEventListener('click', prevSlide9);
 
 // Initialize first slide
 showSlide9(currentIndex9);
+
+
+document.querySelector('.next9').addEventListener('click', nextSlide9);
+document.querySelector('.prev9').addEventListener('click', prevSlide9);

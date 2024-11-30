@@ -86,3 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Initialize first slide
   showSlide9(currentIndex9);
+
+  // Event listeners for next and previous buttons
+document.querySelector('.next9').addEventListener('click', nextSlide9);
+document.querySelector('.prev9').addEventListener('click', prevSlide9);

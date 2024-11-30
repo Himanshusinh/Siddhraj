@@ -413,7 +413,6 @@ color: white;
 
 
 .boxslider9 {
-  
   position: relative;
   overflow: hidden;
   width: 98vw; /* Adjusted width for visibility of adjacent images */
@@ -458,6 +457,28 @@ color: white;
 
   .title_wrapper h1{
     font-size: 27px;
+  }
+
+  .prev9, .next9 {
+    position: absolute;
+    /* top: 50%;
+    transform: translateY(-50%); */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: 2px;
+    height: 2px;
+    /* margin-top: -450px; */
+  }
+  .prev9 {
+    z-index: 9999;
+    left: 10px;
+  }
+  
+  .next9 {
+    z-index: 9999;
+    right: 10px;
   }
   
 }
@@ -505,34 +526,37 @@ color: white;
   border: none;
   cursor: pointer;
   padding: 0;
+  width: 17px;
+  height: 17px;
+  margin-top: -450px;
 }
 
 .prev9 {
-  z-index: 9999; /* Ensure it's on top of other elements */
+  z-index: 9999;
+  left: 10px;
 }
 
 .next9 {
+  z-index: 9999;
   right: 10px;
 }
 
-.prev9 svg, .next9 svg {
+/* .prev9 svg, .next9 svg {
   width: 24px;
   height: 24px;
-  color: #333; /* Arrow color */
+  color: #333;
   transition: transform 0.2s ease;
+} */
 
-}
-
-.prev9:hover svg, .next9:hover svg {
+/* .prev9:hover svg, .next9:hover svg {
   transform: scale(1.2);
-}
+} */
 
 
 
 .middle-image{
   margin: 0 0 8% 0;
 }
-
 
 
 /* location */

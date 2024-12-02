@@ -128,7 +128,7 @@ closeFormBtn.addEventListener('click', () => {
 // Close Success Popup and Redirect to Google Drive PDF
 closeSuccessBtn.addEventListener('click', () => {
   console.log("Close success button clicked.");
-  const pdfLink = "https://drive.google.com/drive/folders/1PzS5pftZsyttDYD_4KWLjw9o8UbsR32W"; // Replace with your actual Google Drive PDF link
+  const pdfLink = "https://drive.google.com/file/d/1k_u5JSPaA7JiqRncsKih8HRFrL12Om35/view?usp=sharing"; // Replace with your actual Google Drive PDF link
   console.log("Redirecting to PDF link:", pdfLink);
   window.location.href = pdfLink; // Redirect user to the PDF download page
 });
